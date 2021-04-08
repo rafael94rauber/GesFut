@@ -19,7 +19,7 @@ namespace GesFut
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("tetewtwetwetwe");
+            MessageBox.Show("teste ge");
 
             //teste de commit 
         }
