@@ -12,6 +12,8 @@ namespace GesFut
         public int UsuarioResponsavel { get; set; }
         public double Peso { get; set; }
         public abstract String GetInsert();
+        public abstract String GetUpdate();
+        public abstract String GetDelete();
         
     }
 }
