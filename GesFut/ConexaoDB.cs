@@ -78,7 +78,7 @@ namespace GesFut
             using var conn = new NpgsqlConnection(ConexaoDb);
             conn.Open();
 
-            using var command = new NpgsqlCommand("UPDATE usuario SET nome = @p1 WHERE name = @p2", conn);
+            using var command = new NpgsqlCommand("UPDATE usuario SET nome = @p1 WHERE nome = @p2", conn);
             command.Parameters.AddWithValue("p1", "banana");
             command.Parameters.AddWithValue("p2", "banana");
             int numeroLinhasAfetadas = command.ExecuteNonQuery();
@@ -93,7 +93,7 @@ namespace GesFut
             using var conn = new NpgsqlConnection(ConexaoDb);
             conn.Open();
 
-            using var command = new NpgsqlCommand("DELETE FROM usuario WHERE name = @p1", conn);
+            using var command = new NpgsqlCommand("DELETE FROM usuario WHERE nome = @p1", conn);
             command.Parameters.AddWithValue("p1", "orange");
 
             int numeroLinhasAfetadas = command.ExecuteNonQuery();
