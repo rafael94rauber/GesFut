@@ -19,6 +19,17 @@ namespace GesFut
 
         private void button1_Click(object sender, EventArgs e)
         {
+            AvaliacaoMedica avaliacao = new AvaliacaoMedica();
+            avaliacao.CodigoAtleta = Convert.ToInt32(txtCodigoAtleta.Text);
+            avaliacao.DataAvaliacao = DateTime.Now;
+            avaliacao.UsuarioResponsavel = 1; // admin
+            avaliacao.Peso = Convert.ToDouble(txtPeso.Text);
+            avaliacao.TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text);
+            avaliacao.Pressao = txtPressao.Text;
+            avaliacao.BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text);
+            avaliacao.Alergias = txtAlergias.Text;
+            avaliacao.Lesao = chkLesao.Checked;
+            
             MessageBox.Show("Informações Salvas!");
 
             //teste de commit 
@@ -36,6 +47,11 @@ namespace GesFut
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }

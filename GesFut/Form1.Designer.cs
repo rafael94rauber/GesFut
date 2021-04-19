@@ -31,24 +31,27 @@ namespace GesFut
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTempoJogo = new System.Windows.Forms.TextBox();
+            this.txtPercentualGordura = new System.Windows.Forms.TextBox();
+            this.txtVelocidadeMedia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTemperaturaCorporal = new System.Windows.Forms.TextBox();
+            this.txtPressao = new System.Windows.Forms.TextBox();
+            this.txtBatimentosCardiacos = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtAlergias = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtHistoricoAtleta = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCodigoAtleta = new System.Windows.Forms.TextBox();
+            this.chkLesao = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtPeso = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -71,26 +74,26 @@ namespace GesFut
             this.label1.TabIndex = 1;
             this.label1.Text = "Avaliação Médica de Desempenho de Atleta";
             // 
-            // textBox1
+            // txtTempoJogo
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 2;
+            this.txtTempoJogo.Location = new System.Drawing.Point(54, 82);
+            this.txtTempoJogo.Name = "txtTempoJogo";
+            this.txtTempoJogo.Size = new System.Drawing.Size(100, 23);
+            this.txtTempoJogo.TabIndex = 2;
             // 
-            // textBox2
+            // txtPercentualGordura
             // 
-            this.textBox2.Location = new System.Drawing.Point(54, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 3;
+            this.txtPercentualGordura.Location = new System.Drawing.Point(54, 144);
+            this.txtPercentualGordura.Name = "txtPercentualGordura";
+            this.txtPercentualGordura.Size = new System.Drawing.Size(100, 23);
+            this.txtPercentualGordura.TabIndex = 3;
             // 
-            // textBox3
+            // txtVelocidadeMedia
             // 
-            this.textBox3.Location = new System.Drawing.Point(54, 212);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 4;
+            this.txtVelocidadeMedia.Location = new System.Drawing.Point(54, 212);
+            this.txtVelocidadeMedia.Name = "txtVelocidadeMedia";
+            this.txtVelocidadeMedia.Size = new System.Drawing.Size(100, 23);
+            this.txtVelocidadeMedia.TabIndex = 4;
             // 
             // label2
             // 
@@ -119,26 +122,26 @@ namespace GesFut
             this.label4.TabIndex = 7;
             this.label4.Text = "Velocidade Média";
             // 
-            // textBox4
+            // txtTemperaturaCorporal
             // 
-            this.textBox4.Location = new System.Drawing.Point(344, 81);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 8;
+            this.txtTemperaturaCorporal.Location = new System.Drawing.Point(344, 81);
+            this.txtTemperaturaCorporal.Name = "txtTemperaturaCorporal";
+            this.txtTemperaturaCorporal.Size = new System.Drawing.Size(100, 23);
+            this.txtTemperaturaCorporal.TabIndex = 8;
             // 
-            // textBox5
+            // txtPressao
             // 
-            this.textBox5.Location = new System.Drawing.Point(343, 144);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 9;
+            this.txtPressao.Location = new System.Drawing.Point(343, 144);
+            this.txtPressao.Name = "txtPressao";
+            this.txtPressao.Size = new System.Drawing.Size(100, 23);
+            this.txtPressao.TabIndex = 9;
             // 
-            // textBox6
+            // txtBatimentosCardiacos
             // 
-            this.textBox6.Location = new System.Drawing.Point(343, 212);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 23);
-            this.textBox6.TabIndex = 10;
+            this.txtBatimentosCardiacos.Location = new System.Drawing.Point(343, 212);
+            this.txtBatimentosCardiacos.Name = "txtBatimentosCardiacos";
+            this.txtBatimentosCardiacos.Size = new System.Drawing.Size(100, 23);
+            this.txtBatimentosCardiacos.TabIndex = 10;
             // 
             // label5
             // 
@@ -167,12 +170,12 @@ namespace GesFut
             this.label7.TabIndex = 13;
             this.label7.Text = "Batimentos Cárdiacos";
             // 
-            // textBox7
+            // txtAlergias
             // 
-            this.textBox7.Location = new System.Drawing.Point(344, 260);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 23);
-            this.textBox7.TabIndex = 14;
+            this.txtAlergias.Location = new System.Drawing.Point(344, 260);
+            this.txtAlergias.Name = "txtAlergias";
+            this.txtAlergias.Size = new System.Drawing.Size(100, 23);
+            this.txtAlergias.TabIndex = 14;
             // 
             // label8
             // 
@@ -184,68 +187,93 @@ namespace GesFut
             this.label8.Text = "Alergias";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // radioButton1
+            // txtHistoricoAtleta
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(54, 267);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 19);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Possui Lesão";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(160, 266);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(117, 19);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Não Possui Lesão";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(54, 323);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(433, 23);
-            this.textBox8.TabIndex = 18;
+            this.txtHistoricoAtleta.Location = new System.Drawing.Point(54, 384);
+            this.txtHistoricoAtleta.Multiline = true;
+            this.txtHistoricoAtleta.Name = "txtHistoricoAtleta";
+            this.txtHistoricoAtleta.Size = new System.Drawing.Size(433, 23);
+            this.txtHistoricoAtleta.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(54, 302);
+            this.label9.Location = new System.Drawing.Point(54, 366);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 15);
             this.label9.TabIndex = 19;
             this.label9.Text = "Histórico de Atleta";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(160, 56);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 15);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Codigo Atleta";
+            // 
+            // txtCodigoAtleta
+            // 
+            this.txtCodigoAtleta.Location = new System.Drawing.Point(54, 53);
+            this.txtCodigoAtleta.Name = "txtCodigoAtleta";
+            this.txtCodigoAtleta.Size = new System.Drawing.Size(100, 23);
+            this.txtCodigoAtleta.TabIndex = 20;
+            // 
+            // chkLesao
+            // 
+            this.chkLesao.AutoSize = true;
+            this.chkLesao.Location = new System.Drawing.Point(54, 262);
+            this.chkLesao.Name = "chkLesao";
+            this.chkLesao.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkLesao.Size = new System.Drawing.Size(56, 19);
+            this.chkLesao.TabIndex = 22;
+            this.chkLesao.Text = "Lesão";
+            this.chkLesao.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(161, 324);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 15);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Peso";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // txtPeso
+            // 
+            this.txtPeso.Location = new System.Drawing.Point(54, 317);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(100, 23);
+            this.txtPeso.TabIndex = 23;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtPeso);
+            this.Controls.Add(this.chkLesao);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtCodigoAtleta);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.txtHistoricoAtleta);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtAlergias);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtBatimentosCardiacos);
+            this.Controls.Add(this.txtPressao);
+            this.Controls.Add(this.txtTemperaturaCorporal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtVelocidadeMedia);
+            this.Controls.Add(this.txtPercentualGordura);
+            this.Controls.Add(this.txtTempoJogo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -260,24 +288,27 @@ namespace GesFut
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTempoJogo;
+        private System.Windows.Forms.TextBox txtPercentualGordura;
+        private System.Windows.Forms.TextBox txtVelocidadeMedia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTemperaturaCorporal;
+        private System.Windows.Forms.TextBox txtPressao;
+        private System.Windows.Forms.TextBox txtBatimentosCardiacos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtAlergias;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtHistoricoAtleta;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtCodigoAtleta;
+        private System.Windows.Forms.CheckBox chkLesao;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtPeso;
     }
 }
 
