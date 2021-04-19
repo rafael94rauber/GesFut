@@ -29,7 +29,10 @@ namespace GesFut
             avaliacao.BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text);
             avaliacao.Alergias = txtAlergias.Text;
             avaliacao.Lesao = chkLesao.Checked;
-            
+
+            ConexaoDB conexao = new ConexaoDB();
+            conexao.InsertDados(avaliacao);
+
             MessageBox.Show("Informações Salvas!");
 
             //teste de commit 
@@ -48,12 +51,16 @@ namespace GesFut
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ConexaoDB conexao = new ConexaoDB();
+            DataSet dataset = conexao.RetornarDados();
+            dbgAvaliacoes.AutoGenerateColumns = true;
+            dbgAvaliacoes.DataMember = "usuario";
+            dbgAvaliacoes.DataSource = dataset;
+            
+            //dbgAvaliacoes.;
+            
 
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

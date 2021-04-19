@@ -45,13 +45,13 @@ namespace GesFut
             this.label7 = new System.Windows.Forms.Label();
             this.txtAlergias = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtHistoricoAtleta = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCodigoAtleta = new System.Windows.Forms.TextBox();
             this.chkLesao = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
+            this.dbgAvaliacoes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacoes)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -187,23 +187,6 @@ namespace GesFut
             this.label8.Text = "Alergias";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // txtHistoricoAtleta
-            // 
-            this.txtHistoricoAtleta.Location = new System.Drawing.Point(54, 384);
-            this.txtHistoricoAtleta.Multiline = true;
-            this.txtHistoricoAtleta.Name = "txtHistoricoAtleta";
-            this.txtHistoricoAtleta.Size = new System.Drawing.Size(433, 23);
-            this.txtHistoricoAtleta.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(54, 366);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 15);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Histórico de Atleta";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -234,32 +217,39 @@ namespace GesFut
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(161, 324);
+            this.label11.Location = new System.Drawing.Point(161, 294);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 15);
             this.label11.TabIndex = 24;
             this.label11.Text = "Peso";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(54, 317);
+            this.txtPeso.Location = new System.Drawing.Point(54, 287);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(100, 23);
             this.txtPeso.TabIndex = 23;
+            // 
+            // dbgAvaliacoes
+            // 
+            this.dbgAvaliacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbgAvaliacoes.Location = new System.Drawing.Point(54, 330);
+            this.dbgAvaliacoes.Name = "dbgAvaliacoes";
+            this.dbgAvaliacoes.RowTemplate.Height = 25;
+            this.dbgAvaliacoes.Size = new System.Drawing.Size(574, 279);
+            this.dbgAvaliacoes.TabIndex = 25;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 621);
+            this.Controls.Add(this.dbgAvaliacoes);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.chkLesao);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtCodigoAtleta);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtHistoricoAtleta);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAlergias);
             this.Controls.Add(this.label7);
@@ -279,6 +269,7 @@ namespace GesFut
             this.Name = "Form1";
             this.Text = "Avaliação Médica de Desempenho de Atleta";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacoes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,13 +293,12 @@ namespace GesFut
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAlergias;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtHistoricoAtleta;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCodigoAtleta;
         private System.Windows.Forms.CheckBox chkLesao;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.DataGridView dbgAvaliacoes;
     }
 }
 

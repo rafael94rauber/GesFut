@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace GesFut
 {
@@ -11,7 +12,7 @@ namespace GesFut
         private static string Port = "5432";
         private static string DBname = "gesfut";
         private static string User = "postgres";
-        private static string Password = "rer251994";
+        private static string Password = "123456";
         private static string ConexaoDb = "";
 
         public ConexaoDB()
@@ -25,46 +26,31 @@ namespace GesFut
                     Password);
         }
 
-        public void RetornarDados()
+        public DataSet RetornarDados()
         {
+            DataSet ds;
             using var conn = new NpgsqlConnection(ConexaoDb);
             conn.Open();
 
             using (NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM usuario", conn))
             {
-                var reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    Console.WriteLine(
-                        string.Format(
-                            "Reading from table=({0}, {1}, {2})",
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1),
-                            reader.GetInt32(2).ToString()
-                            )
-                        );
-                }
-                reader.Close();
+                NpgsqlDataAdapter sda = new NpgsqlDataAdapter(command);
+                ds = new DataSet();
+                sda.Fill(ds);
+
             }
             conn.Close();
             conn.Dispose();
+            return ds;
         }
 
-        public int ExecutarComando()
+        public int InsertDados(Base obj)
         {
             using var conn = new NpgsqlConnection(ConexaoDb);
             Console.Out.WriteLine("Opening connection");
             conn.Open();
 
-            using var command = new NpgsqlCommand("INSERT INTO usuario (nome, cpf, data_nascimento, email, endereco, telefone, RG, usuario, senha) VALUES (@p1, @p2, NOW(), @p4, @p5, @p6, @p7, @p8, @p9)", conn);
-            command.Parameters.AddWithValue("p1", "banana");
-            command.Parameters.AddWithValue("p2", "banana");
-            command.Parameters.AddWithValue("p4", "banana");
-            command.Parameters.AddWithValue("p5", "banana");
-            command.Parameters.AddWithValue("p6", "banana");
-            command.Parameters.AddWithValue("p7", "banana");
-            command.Parameters.AddWithValue("p8", "banana");
-            command.Parameters.AddWithValue("p9", "banana");
+            using var command = new NpgsqlCommand(obj.GetInsert(), conn);
 
 
             int numeroLinhasAfetadas = command.ExecuteNonQuery();
