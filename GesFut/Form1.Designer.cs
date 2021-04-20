@@ -233,10 +233,10 @@ namespace GesFut
             // dbgAvaliacoes
             // 
             this.dbgAvaliacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dbgAvaliacoes.Location = new System.Drawing.Point(54, 330);
+            this.dbgAvaliacoes.Location = new System.Drawing.Point(12, 330);
             this.dbgAvaliacoes.Name = "dbgAvaliacoes";
             this.dbgAvaliacoes.RowTemplate.Height = 25;
-            this.dbgAvaliacoes.Size = new System.Drawing.Size(574, 279);
+            this.dbgAvaliacoes.Size = new System.Drawing.Size(776, 279);
             this.dbgAvaliacoes.TabIndex = 25;
             // 
             // Form1

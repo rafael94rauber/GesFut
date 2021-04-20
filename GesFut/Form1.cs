@@ -53,13 +53,9 @@ namespace GesFut
         {
             ConexaoDB conexao = new ConexaoDB();
             DataSet dataset = conexao.RetornarDados();
-            dbgAvaliacoes.AutoGenerateColumns = true;
-            dbgAvaliacoes.DataMember = "usuario";
-            dbgAvaliacoes.DataSource = dataset;
-            
-            //dbgAvaliacoes.;
-            
 
+            //atribui o datatable ao datagridview para exibir o resultado
+            dbgAvaliacoes.DataSource = dataset.Tables[0];
         }
 
     }
