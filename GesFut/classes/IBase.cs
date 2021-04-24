@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GesFut
 {
-    public abstract class Base
+    public interface IBaseSQL
     {
         public abstract String GetInsert();
         public abstract String GetUpdate();

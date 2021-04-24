@@ -12,7 +12,7 @@ namespace GesFut
         private static string Port = "5432";
         private static string DBname = "gesfut";
         private static string User = "postgres";
-        private static string Password = "rer251994";
+        private static string Password = "123456";
         private static string ConexaoDb = "";
 
         public ConexaoDB()
@@ -26,13 +26,13 @@ namespace GesFut
                     Password);
         }
 
-        public DataSet RetornarDados()
+        public DataSet RetornarDados(String SQL)
         {
             DataSet ds;
             using var conn = new NpgsqlConnection(ConexaoDb);
             conn.Open();
 
-            using (NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM usuario", conn))
+            using (NpgsqlCommand command = new NpgsqlCommand(SQL, conn))
             {
                 NpgsqlDataAdapter sda = new NpgsqlDataAdapter(command);
                 ds = new DataSet();
@@ -44,7 +44,7 @@ namespace GesFut
             return ds;
         }
 
-        public int InsertDados(Base obj)
+        public int InsertDados(IBaseSQL obj)
         {
             using var conn = new NpgsqlConnection(ConexaoDb);
             Console.Out.WriteLine("Opening connection");

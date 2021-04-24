@@ -1,7 +1,7 @@
 ﻿
 namespace GesFut
 {
-    partial class Form1
+    partial class FormAvaliacaoMedica
     {
         /// <summary>
         ///  Required designer variable.
@@ -232,14 +232,19 @@ namespace GesFut
             // 
             // dbgAvaliacoes
             // 
+            this.dbgAvaliacoes.AllowUserToAddRows = false;
             this.dbgAvaliacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbgAvaliacoes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dbgAvaliacoes.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.dbgAvaliacoes.Location = new System.Drawing.Point(12, 330);
             this.dbgAvaliacoes.Name = "dbgAvaliacoes";
+            this.dbgAvaliacoes.ReadOnly = true;
             this.dbgAvaliacoes.RowTemplate.Height = 25;
+            this.dbgAvaliacoes.ShowEditingIcon = false;
             this.dbgAvaliacoes.Size = new System.Drawing.Size(776, 279);
             this.dbgAvaliacoes.TabIndex = 25;
             // 
-            // Form1
+            // FormAvaliacaoMedica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,7 +271,7 @@ namespace GesFut
             this.Controls.Add(this.txtTempoJogo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "FormAvaliacaoMedica";
             this.Text = "Avaliação Médica de Desempenho de Atleta";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacoes)).EndInit();

@@ -32,5 +32,10 @@ namespace GesFut
         {
             return $"DELETE FROM AVALIACAO_MEDICA WHERE codigo_avaliacao = {CodigoAvaliacao}";
         }
+
+        public static String GetSelect()
+        {
+            return "Select * from AVALIACAO_MEDICA";
+        }
     }
 }

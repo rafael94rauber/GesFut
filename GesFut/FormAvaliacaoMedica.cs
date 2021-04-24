@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GesFut
 {
-    public partial class Form1 : Form
+    public partial class FormAvaliacaoMedica : Form
     {
-        public Form1()
+        public FormAvaliacaoMedica()
         {
             InitializeComponent();
         }
@@ -33,6 +33,7 @@ namespace GesFut
             ConexaoDB conexao = new ConexaoDB();
             conexao.InsertDados(avaliacao);
 
+            LoadData();
             MessageBox.Show("Informações Salvas!");
 
             //teste de commit 
@@ -51,12 +52,18 @@ namespace GesFut
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LoadData();
+        }
+
+        public void LoadData()
+        {
             ConexaoDB conexao = new ConexaoDB();
-            DataSet dataset = conexao.RetornarDados();
+            DataSet dataset = conexao.RetornarDados(AvaliacaoMedica.GetSelect());
 
             //atribui o datatable ao datagridview para exibir o resultado
             dbgAvaliacoes.DataSource = dataset.Tables[0];
         }
+
 
     }
 }

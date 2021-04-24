@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GesFut
 {
-    class AvaliacaoDesempenho : Avaliacao
+    class AvaliacaoDesempenho : Avaliacao, IBaseSQL
     {
         public DateTime TempoJogo { get; set; }
         public double PercentualGordura { get; set; }
