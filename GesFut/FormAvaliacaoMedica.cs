@@ -34,6 +34,7 @@ namespace GesFut
             conexao.InsertDados(avaliacao);
 
             LoadData();
+            LimpaTela();
             MessageBox.Show("Informações Salvas!");
 
             //teste de commit 
@@ -62,6 +63,17 @@ namespace GesFut
 
             //atribui o datatable ao datagridview para exibir o resultado
             dbgAvaliacoes.DataSource = dataset.Tables[0];
+        }
+
+        public voida LimpaTela()
+        {
+            txtCodigoAtleta.Text = "";
+            txtPeso.Text = "";
+            txtTemperaturaCorporal.Text = "";
+            txtPressao.Text = "";
+            txtBatimentosCardiacos.Text = "";
+            txtAlergias.Text = "";
+            chkLesao.Checked = false;
         }
 
 
