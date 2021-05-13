@@ -6,8 +6,8 @@ namespace GesFut
 {
     public interface IBaseSQL
     {
-        public abstract String GetInsert();
-        public abstract String GetUpdate();
-        public abstract String GetDelete();
+        public abstract string GetInsert();
+        public abstract string GetUpdate();
+        public abstract string GetDelete();
     }
 }

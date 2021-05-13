@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GesFut
@@ -19,19 +12,21 @@ namespace GesFut
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AvaliacaoMedica avaliacao = new AvaliacaoMedica();
-            avaliacao.CodigoAtleta = Convert.ToInt32(txtCodigoAtleta.Text);
-            avaliacao.DataAvaliacao = DateTime.Now;
-            avaliacao.UsuarioResponsavel = 1; // admin
-            avaliacao.Peso = Convert.ToDouble(txtPeso.Text);
-            avaliacao.TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text);
-            avaliacao.Pressao = txtPressao.Text;
-            avaliacao.BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text);
-            avaliacao.Alergias = txtAlergias.Text;
-            avaliacao.Lesao = chkLesao.Checked;
+            var avaliacao = new Avaliacao
+            {
+                CodigoAtleta = Convert.ToInt32(txtCodigoAtleta.Text),
+                DataAvaliacao = DateTime.Now,
+                UsuarioResponsavel = 1, // admin
+                Peso = Convert.ToDouble(txtPeso.Text),
+                //TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text),
+                //Pressao = txtPressao.Text,
+                //BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text),
+                //Alergias = txtAlergias.Text,
+                //Lesao = chkLesao.Checked
+            };
 
-            ConexaoDB conexao = new ConexaoDB();
-            conexao.InsertDados(avaliacao);
+            RequestApi request = new RequestApi();
+            var resposta = request.AtualizarAvaliacao(avaliacao);
 
             LoadData();
             MessageBox.Show("Informações Salvas!");
@@ -57,13 +52,10 @@ namespace GesFut
 
         public void LoadData()
         {
-            ConexaoDB conexao = new ConexaoDB();
-            DataSet dataset = conexao.RetornarDados(AvaliacaoMedica.GetSelect());
+            //buscar metodo da api
 
             //atribui o datatable ao datagridview para exibir o resultado
-            dbgAvaliacoes.DataSource = dataset.Tables[0];
+            //dbgAvaliacoes.DataSource = dataset.Tables[0];
         }
-
-
-    }
+    }   
 }
