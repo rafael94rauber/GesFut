@@ -47,15 +47,14 @@ namespace GesFut
 
         private void salvarAtleta_Click(object sender, EventArgs e)
         {
-            var atleta = new Atleta
+            var atleta = new Atleta(0)
             {
                 //   CodigoAtleta = Cod
                 Nome = edtNome.Text,
-                Idade = Convert.ToInt32(idade.Text),
                 Email = edtEmail.Text,
                 Telefone = edtTelefone.Text,
                 Endereco = edtEndereco.Text,
-                Nascimento = edtNascimento.Text,
+                DataNascimento = Convert.ToDateTime(edtNascimento.Text),
                 Sexo = edtSexo.Text,
                 CPF = edtCPF.Text,
             };
