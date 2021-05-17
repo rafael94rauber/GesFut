@@ -3,7 +3,7 @@ using System;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace GesFut
+namespace GesFutApi.Servico
 {
     public class ConexaoDB
     {
@@ -12,7 +12,8 @@ namespace GesFut
         private static string Port = "5432";
         private static string DBname = "gesfut";
         private static string User = "postgres";
-        private static string Password = "rer251994";
+        //private static string Password = "rer251994";
+        private static string Password = "123456";
         private static string ConexaoDb = "";
 
         public ConexaoDB()

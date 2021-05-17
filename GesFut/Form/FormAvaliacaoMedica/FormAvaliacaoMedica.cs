@@ -12,17 +12,17 @@ namespace GesFut
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var avaliacao = new Avaliacao
+            var avaliacao = new AvaliacaoMedica
             {
                 CodigoAtleta = Convert.ToInt32(txtCodigoAtleta.Text),
                 DataAvaliacao = DateTime.Now,
                 UsuarioResponsavel = 1, // admin
                 Peso = Convert.ToDouble(txtPeso.Text),
-                //TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text),
-                //Pressao = txtPressao.Text,
-                //BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text),
-                //Alergias = txtAlergias.Text,
-                //Lesao = chkLesao.Checked
+                TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text),
+                Pressao = txtPressao.Text,
+                BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text),
+                Alergias = txtAlergias.Text,
+                Lesao = chkLesao.Checked
             };
 
             RequestApi request = new RequestApi();
@@ -31,8 +31,6 @@ namespace GesFut
             LoadData();
             LimpaTela();
             MessageBox.Show("Informações Salvas!");
-
-            //teste de commit 
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -59,7 +57,7 @@ namespace GesFut
             //dbgAvaliacoes.DataSource = dataset.Tables[0];
         }
 
-        public voida LimpaTela()
+        public void LimpaTela()
         {
             txtCodigoAtleta.Text = "";
             txtPeso.Text = "";
@@ -70,6 +68,9 @@ namespace GesFut
             chkLesao.Checked = false;
         }
 
+        private void chkLesao_CheckedChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

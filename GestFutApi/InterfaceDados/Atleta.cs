@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace GesFut.classes
+namespace GesFut
 {
-    class Atleta: IBaseSQL
+    public class Atleta
     {
         public int CodigoAtleta { get; }
         public String Nome { get; set; }
@@ -33,23 +34,5 @@ namespace GesFut.classes
             avaliacoesMedicas.Add(avaliacaoMedica);
         }
 
-        public String GetInsert()
-        {
-            return $"insert into atleta (nome, cpf, data_nascimento, altura) values ({Nome}," +
-                   $"{CPF}, {DataNascimento.ToString("yyyy-MM-dd")}, {Altura});";
-        }
-        public abstract String GetUpdate()
-        {
-            return $"update atleta set" +
-                   $"  nome = {Nome},  " +
-                   $"  cpf = {CPF}," +
-                   $"  data_nascimento = {DataNascimento}," +
-                   $"  altura = {Altura}" +
-                   $"where codigo_atleta = {CodigoAtleta};";
-        }
-        public abstract String GetDelete()
-        {
-            return $"DELETE FROM atleta WHERE codigo_atleta = {CodigoAtleta}";
-        }
     }
 }

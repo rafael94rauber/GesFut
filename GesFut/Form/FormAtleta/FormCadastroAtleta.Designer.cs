@@ -31,26 +31,24 @@ namespace GesFut
         {
             this.salvarAtleta = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.nome = new System.Windows.Forms.TextBox();
+            this.edtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.idade = new System.Windows.Forms.TextBox();
-            this.nascimento = new System.Windows.Forms.TextBox();
-            this.endereco = new System.Windows.Forms.TextBox();
-            this.email = new System.Windows.Forms.TextBox();
-            this.CPF = new System.Windows.Forms.MaskedTextBox();
-            this.telefone = new System.Windows.Forms.MaskedTextBox();
-            this.sexo = new System.Windows.Forms.TextBox();
+            this.edtNascimento = new System.Windows.Forms.TextBox();
+            this.edtEndereco = new System.Windows.Forms.TextBox();
+            this.edtEmail = new System.Windows.Forms.TextBox();
+            this.edtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.edtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.edtSexo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // salvarAtleta
             // 
-            this.salvarAtleta.Location = new System.Drawing.Point(689, 13);
+            this.salvarAtleta.Location = new System.Drawing.Point(490, 226);
             this.salvarAtleta.Name = "salvarAtleta";
             this.salvarAtleta.Size = new System.Drawing.Size(75, 23);
             this.salvarAtleta.TabIndex = 0;
@@ -67,20 +65,10 @@ namespace GesFut
             this.label1.TabIndex = 2;
             this.label1.Text = "Nome";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Idade";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 210);
+            this.label4.Location = new System.Drawing.Point(23, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 15);
             this.label4.TabIndex = 5;
@@ -89,7 +77,7 @@ namespace GesFut
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 285);
+            this.label5.Location = new System.Drawing.Point(23, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 15);
             this.label5.TabIndex = 6;
@@ -99,7 +87,7 @@ namespace GesFut
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(327, 141);
+            this.label6.Location = new System.Drawing.Point(327, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 15);
             this.label6.TabIndex = 7;
@@ -125,95 +113,86 @@ namespace GesFut
             this.label8.TabIndex = 9;
             this.label8.Text = "Data de Nascimento";
             // 
-            // nome
+            // edtNome
             // 
-            this.nome.Location = new System.Drawing.Point(133, 40);
-            this.nome.Name = "nome";
-            this.nome.Size = new System.Drawing.Size(100, 23);
-            this.nome.TabIndex = 1;
+            this.edtNome.Location = new System.Drawing.Point(133, 40);
+            this.edtNome.Name = "edtNome";
+            this.edtNome.Size = new System.Drawing.Size(100, 23);
+            this.edtNome.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 141);
+            this.label3.Location = new System.Drawing.Point(23, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Email para Contato";
             // 
-            // idade
+            // edtNascimento
             // 
-            this.idade.Location = new System.Drawing.Point(133, 81);
-            this.idade.Name = "idade";
-            this.idade.Size = new System.Drawing.Size(100, 23);
-            this.idade.TabIndex = 10;
+            this.edtNascimento.Location = new System.Drawing.Point(465, 40);
+            this.edtNascimento.Name = "edtNascimento";
+            this.edtNascimento.Size = new System.Drawing.Size(100, 23);
+            this.edtNascimento.TabIndex = 11;
+            this.edtNascimento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // nascimento
+            // edtEndereco
             // 
-            this.nascimento.Location = new System.Drawing.Point(465, 40);
-            this.nascimento.Name = "nascimento";
-            this.nascimento.Size = new System.Drawing.Size(100, 23);
-            this.nascimento.TabIndex = 11;
-            this.nascimento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.edtEndereco.Location = new System.Drawing.Point(133, 170);
+            this.edtEndereco.Name = "edtEndereco";
+            this.edtEndereco.Size = new System.Drawing.Size(432, 23);
+            this.edtEndereco.TabIndex = 13;
             // 
-            // endereco
+            // edtEmail
             // 
-            this.endereco.Location = new System.Drawing.Point(133, 282);
-            this.endereco.Name = "endereco";
-            this.endereco.Size = new System.Drawing.Size(100, 23);
-            this.endereco.TabIndex = 13;
+            this.edtEmail.Location = new System.Drawing.Point(133, 81);
+            this.edtEmail.Name = "edtEmail";
+            this.edtEmail.Size = new System.Drawing.Size(100, 23);
+            this.edtEmail.TabIndex = 15;
             // 
-            // email
+            // edtCPF
             // 
-            this.email.Location = new System.Drawing.Point(133, 138);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(100, 23);
-            this.email.TabIndex = 15;
+            this.edtCPF.Location = new System.Drawing.Point(465, 125);
+            this.edtCPF.Mask = "000,000,000-00";
+            this.edtCPF.Name = "edtCPF";
+            this.edtCPF.Size = new System.Drawing.Size(100, 23);
+            this.edtCPF.TabIndex = 17;
             // 
-            // CPF
+            // edtTelefone
             // 
-            this.CPF.Location = new System.Drawing.Point(465, 138);
-            this.CPF.Mask = "000,000,000-00";
-            this.CPF.Name = "CPF";
-            this.CPF.Size = new System.Drawing.Size(100, 23);
-            this.CPF.TabIndex = 17;
+            this.edtTelefone.Location = new System.Drawing.Point(133, 125);
+            this.edtTelefone.Mask = "(99) 00000-0000";
+            this.edtTelefone.Name = "edtTelefone";
+            this.edtTelefone.Size = new System.Drawing.Size(100, 23);
+            this.edtTelefone.TabIndex = 18;
             // 
-            // telefone
+            // edtSexo
             // 
-            this.telefone.Location = new System.Drawing.Point(133, 207);
-            this.telefone.Mask = "(99) 00000-0000";
-            this.telefone.Name = "telefone";
-            this.telefone.Size = new System.Drawing.Size(100, 23);
-            this.telefone.TabIndex = 18;
-            // 
-            // sexo
-            // 
-            this.sexo.Location = new System.Drawing.Point(465, 81);
-            this.sexo.Name = "sexo";
-            this.sexo.Size = new System.Drawing.Size(100, 23);
-            this.sexo.TabIndex = 12;
+            this.edtSexo.Location = new System.Drawing.Point(465, 81);
+            this.edtSexo.Name = "edtSexo";
+            this.edtSexo.Size = new System.Drawing.Size(100, 23);
+            this.edtSexo.TabIndex = 12;
             // 
             // FormCadastroAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.telefone);
-            this.Controls.Add(this.CPF);
-            this.Controls.Add(this.email);
-            this.Controls.Add(this.endereco);
-            this.Controls.Add(this.sexo);
-            this.Controls.Add(this.nascimento);
-            this.Controls.Add(this.idade);
+            this.ClientSize = new System.Drawing.Size(588, 274);
+            this.Controls.Add(this.edtTelefone);
+            this.Controls.Add(this.edtCPF);
+            this.Controls.Add(this.edtEmail);
+            this.Controls.Add(this.edtEndereco);
+            this.Controls.Add(this.edtSexo);
+            this.Controls.Add(this.edtNascimento);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nome);
+            this.Controls.Add(this.edtNome);
             this.Controls.Add(this.salvarAtleta);
             this.Name = "FormCadastroAtleta";
             this.Text = "Cadastro de Atleta";
@@ -227,20 +206,18 @@ namespace GesFut
 
         private System.Windows.Forms.Button salvarAtleta;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox nome;
+        private System.Windows.Forms.TextBox edtNome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox idade;
-        private System.Windows.Forms.TextBox nascimento;
-        private System.Windows.Forms.TextBox endereco;
-        private System.Windows.Forms.TextBox email;
-        private System.Windows.Forms.MaskedTextBox CPF;
-        private System.Windows.Forms.MaskedTextBox telefone;
-        private System.Windows.Forms.TextBox sexo;
+        private System.Windows.Forms.TextBox edtNascimento;
+        private System.Windows.Forms.TextBox edtEndereco;
+        private System.Windows.Forms.TextBox edtEmail;
+        private System.Windows.Forms.MaskedTextBox edtCPF;
+        private System.Windows.Forms.MaskedTextBox edtTelefone;
+        private System.Windows.Forms.TextBox edtSexo;
     }
 }

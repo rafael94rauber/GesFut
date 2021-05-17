@@ -1,37 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GesFut;
 
-namespace GesFut
+namespace GesFutApi.Servico
 {
     class AvaliacaoMedicaServico
     {
-        public double TemperaturaCorporal { get; set; }
-        public string Pressao { get; set; }
-        public int BatimentosCardiacos { get; set; }
-        public string Alergias { get; set; }
-        public bool Lesao { get; set; }
-        
-        public string GetInsert(Avaliacao avaliacao)
+        public static string GetInsert(AvaliacaoMedica avaliacao)
         {
             return $"INSERT INTO AVALIACAO_MEDICA (codigo_atleta, data_avaliacao, usuario_responsavel, peso, temperatura_corporal, pressao, batimentos_cardiacos, alergias, lesao) " +
                    $"values ({avaliacao.CodigoAtleta}" +
                    $", '{avaliacao.DataAvaliacao:yyyy-MM-dd}'" +
                    $", {avaliacao.UsuarioResponsavel}" +
                    $", {avaliacao.Peso}" +
-                   $", {TemperaturaCorporal}" +
-                   $", '{Pressao}'" +
-                   $", {BatimentosCardiacos}" +
-                   $", '{Alergias}'" +
-                   $", '{Lesao}') ";
+                   $", {avaliacao.TemperaturaCorporal}" +
+                   $", '{avaliacao.Pressao}'" +
+                   $", {avaliacao.BatimentosCardiacos}" +
+                   $", '{avaliacao.Alergias}'" +
+                   $", '{avaliacao.Lesao}') ";
         }
 
-        public string GetDelete(Avaliacao avaliacao)
+        public static string GetDelete(AvaliacaoMedica avaliacao)
         {
             return $"DELETE FROM AVALIACAO_MEDICA WHERE codigo_avaliacao = {avaliacao.CodigoAvaliacao}";
         }
 
-        public string GetSelect()
+        public static string GetSelect()
         {
             return "Select * from AVALIACAO_MEDICA";
         }

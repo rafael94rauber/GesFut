@@ -30,7 +30,6 @@ namespace GesFut
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtTempoJogo = new System.Windows.Forms.TextBox();
             this.txtPercentualGordura = new System.Windows.Forms.TextBox();
             this.txtVelocidadeMedia = new System.Windows.Forms.TextBox();
@@ -45,18 +44,17 @@ namespace GesFut
             this.label7 = new System.Windows.Forms.Label();
             this.txtAlergias = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtCodigoAtleta = new System.Windows.Forms.TextBox();
             this.chkLesao = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.dbgAvaliacoes = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacoes)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(713, 12);
+            this.button1.Location = new System.Drawing.Point(464, 133);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -65,32 +63,23 @@ namespace GesFut
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(205, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Avaliação Médica de Desempenho de Atleta";
-            // 
             // txtTempoJogo
             // 
-            this.txtTempoJogo.Location = new System.Drawing.Point(54, 82);
+            this.txtTempoJogo.Location = new System.Drawing.Point(149, 17);
             this.txtTempoJogo.Name = "txtTempoJogo";
             this.txtTempoJogo.Size = new System.Drawing.Size(100, 23);
             this.txtTempoJogo.TabIndex = 2;
             // 
             // txtPercentualGordura
             // 
-            this.txtPercentualGordura.Location = new System.Drawing.Point(54, 144);
+            this.txtPercentualGordura.Location = new System.Drawing.Point(149, 46);
             this.txtPercentualGordura.Name = "txtPercentualGordura";
             this.txtPercentualGordura.Size = new System.Drawing.Size(100, 23);
             this.txtPercentualGordura.TabIndex = 3;
             // 
             // txtVelocidadeMedia
             // 
-            this.txtVelocidadeMedia.Location = new System.Drawing.Point(54, 212);
+            this.txtVelocidadeMedia.Location = new System.Drawing.Point(149, 75);
             this.txtVelocidadeMedia.Name = "txtVelocidadeMedia";
             this.txtVelocidadeMedia.Size = new System.Drawing.Size(100, 23);
             this.txtVelocidadeMedia.TabIndex = 4;
@@ -98,7 +87,7 @@ namespace GesFut
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(160, 88);
+            this.label2.Location = new System.Drawing.Point(18, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 15);
             this.label2.TabIndex = 5;
@@ -107,7 +96,7 @@ namespace GesFut
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 152);
+            this.label3.Location = new System.Drawing.Point(18, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 15);
             this.label3.TabIndex = 6;
@@ -116,7 +105,7 @@ namespace GesFut
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(160, 220);
+            this.label4.Location = new System.Drawing.Point(18, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 15);
             this.label4.TabIndex = 7;
@@ -124,21 +113,21 @@ namespace GesFut
             // 
             // txtTemperaturaCorporal
             // 
-            this.txtTemperaturaCorporal.Location = new System.Drawing.Point(344, 81);
+            this.txtTemperaturaCorporal.Location = new System.Drawing.Point(439, 16);
             this.txtTemperaturaCorporal.Name = "txtTemperaturaCorporal";
             this.txtTemperaturaCorporal.Size = new System.Drawing.Size(100, 23);
             this.txtTemperaturaCorporal.TabIndex = 8;
             // 
             // txtPressao
             // 
-            this.txtPressao.Location = new System.Drawing.Point(343, 144);
+            this.txtPressao.Location = new System.Drawing.Point(438, 45);
             this.txtPressao.Name = "txtPressao";
             this.txtPressao.Size = new System.Drawing.Size(100, 23);
             this.txtPressao.TabIndex = 9;
             // 
             // txtBatimentosCardiacos
             // 
-            this.txtBatimentosCardiacos.Location = new System.Drawing.Point(343, 212);
+            this.txtBatimentosCardiacos.Location = new System.Drawing.Point(439, 74);
             this.txtBatimentosCardiacos.Name = "txtBatimentosCardiacos";
             this.txtBatimentosCardiacos.Size = new System.Drawing.Size(100, 23);
             this.txtBatimentosCardiacos.TabIndex = 10;
@@ -146,7 +135,7 @@ namespace GesFut
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(449, 88);
+            this.label5.Location = new System.Drawing.Point(300, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 15);
             this.label5.TabIndex = 11;
@@ -155,7 +144,7 @@ namespace GesFut
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(449, 152);
+            this.label6.Location = new System.Drawing.Point(300, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 15);
             this.label6.TabIndex = 12;
@@ -164,7 +153,7 @@ namespace GesFut
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(449, 220);
+            this.label7.Location = new System.Drawing.Point(301, 77);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 15);
             this.label7.TabIndex = 13;
@@ -172,7 +161,7 @@ namespace GesFut
             // 
             // txtAlergias
             // 
-            this.txtAlergias.Location = new System.Drawing.Point(344, 260);
+            this.txtAlergias.Location = new System.Drawing.Point(439, 103);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(100, 23);
             this.txtAlergias.TabIndex = 14;
@@ -180,44 +169,29 @@ namespace GesFut
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(451, 267);
+            this.label8.Location = new System.Drawing.Point(300, 106);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 15);
             this.label8.TabIndex = 15;
             this.label8.Text = "Alergias";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(160, 56);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 15);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Codigo Atleta";
-            // 
-            // txtCodigoAtleta
-            // 
-            this.txtCodigoAtleta.Location = new System.Drawing.Point(54, 53);
-            this.txtCodigoAtleta.Name = "txtCodigoAtleta";
-            this.txtCodigoAtleta.Size = new System.Drawing.Size(100, 23);
-            this.txtCodigoAtleta.TabIndex = 20;
-            // 
             // chkLesao
             // 
             this.chkLesao.AutoSize = true;
-            this.chkLesao.Location = new System.Drawing.Point(54, 262);
+            this.chkLesao.Location = new System.Drawing.Point(149, 133);
             this.chkLesao.Name = "chkLesao";
-            this.chkLesao.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkLesao.Size = new System.Drawing.Size(56, 19);
+            this.chkLesao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkLesao.Size = new System.Drawing.Size(15, 14);
             this.chkLesao.TabIndex = 22;
-            this.chkLesao.Text = "Lesão";
+            this.chkLesao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkLesao.UseVisualStyleBackColor = true;
+            this.chkLesao.CheckedChanged += new System.EventHandler(this.chkLesao_CheckedChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(161, 294);
+            this.label11.Location = new System.Drawing.Point(18, 107);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 15);
             this.label11.TabIndex = 24;
@@ -225,7 +199,7 @@ namespace GesFut
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(54, 287);
+            this.txtPeso.Location = new System.Drawing.Point(149, 104);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(100, 23);
             this.txtPeso.TabIndex = 23;
@@ -236,25 +210,33 @@ namespace GesFut
             this.dbgAvaliacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbgAvaliacoes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dbgAvaliacoes.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dbgAvaliacoes.Location = new System.Drawing.Point(12, 330);
+            this.dbgAvaliacoes.Location = new System.Drawing.Point(12, 191);
             this.dbgAvaliacoes.Name = "dbgAvaliacoes";
             this.dbgAvaliacoes.ReadOnly = true;
             this.dbgAvaliacoes.RowTemplate.Height = 25;
             this.dbgAvaliacoes.ShowEditingIcon = false;
-            this.dbgAvaliacoes.Size = new System.Drawing.Size(776, 279);
+            this.dbgAvaliacoes.Size = new System.Drawing.Size(527, 279);
             this.dbgAvaliacoes.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Lesão";
             // 
             // FormAvaliacaoMedica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 621);
+            this.ClientSize = new System.Drawing.Size(554, 482);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dbgAvaliacoes);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.chkLesao);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtCodigoAtleta);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAlergias);
             this.Controls.Add(this.label7);
@@ -269,10 +251,8 @@ namespace GesFut
             this.Controls.Add(this.txtVelocidadeMedia);
             this.Controls.Add(this.txtPercentualGordura);
             this.Controls.Add(this.txtTempoJogo);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "FormAvaliacaoMedica";
-            this.Text = "Avaliação Médica de Desempenho de Atleta";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacoes)).EndInit();
             this.ResumeLayout(false);
@@ -283,7 +263,6 @@ namespace GesFut
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTempoJogo;
         private System.Windows.Forms.TextBox txtPercentualGordura;
         private System.Windows.Forms.TextBox txtVelocidadeMedia;
@@ -298,12 +277,11 @@ namespace GesFut
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAlergias;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCodigoAtleta;
         private System.Windows.Forms.CheckBox chkLesao;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.DataGridView dbgAvaliacoes;
+        private System.Windows.Forms.Label label1;
     }
 }
 

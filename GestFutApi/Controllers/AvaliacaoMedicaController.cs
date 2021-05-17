@@ -1,29 +1,30 @@
-﻿using GesFut;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GesFut;
+using GesFutApi.Servico;
 
 namespace GestFutApi.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    public class AvaliacaoMedica : ControllerBase
+    public class AvaliacaoMedicaController : ControllerBase
     {
         [HttpPost]
-        public async Task<object> InserirAvaliacaoMedica([FromBody] Avaliacao avaliacaoMedica)
+        public async Task<object> InserirAvaliacaoMedica([FromBody] AvaliacaoMedica avaliacaoMedica)
         {
-            var insert = new AvaliacaoMedicaServico().GetInsert(avaliacaoMedica);
+            var insert = AvaliacaoMedicaServico.GetInsert(avaliacaoMedica);
             var conexaoDB = new ConexaoDB();
 
             return conexaoDB.InsertDados(insert);
         }
 
         [HttpPost]
-        public async Task<object> DeletarAvaliacaoMedica([FromBody] Avaliacao avaliacaoMedica)
+        public async Task<object> DeletarAvaliacaoMedica([FromBody] AvaliacaoMedica avaliacaoMedica)
         {
-            var delete = new AvaliacaoMedicaServico().GetDelete(avaliacaoMedica);
+            var delete = AvaliacaoMedicaServico.GetDelete(avaliacaoMedica);
             var conexaoDB = new ConexaoDB();
 
             return conexaoDB.DeletarDados(delete);
@@ -32,7 +33,7 @@ namespace GestFutApi.Controllers
         [HttpPost]
         public async Task<object> BuscasAvaliacaoMedica()
         {
-            var select = new AvaliacaoMedicaServico().GetSelect();
+            var select = AvaliacaoMedicaServico.GetSelect();
             var conexaoDB = new ConexaoDB();
 
             return conexaoDB.RetornarDados(select);

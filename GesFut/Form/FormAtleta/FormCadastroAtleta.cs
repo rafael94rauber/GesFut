@@ -50,18 +50,18 @@ namespace GesFut
             var atleta = new Atleta
             {
                 //   CodigoAtleta = Cod
-                Nome = nome.Text,
+                Nome = edtNome.Text,
                 Idade = Convert.ToInt32(idade.Text),
-                Email = email.Text,
-                Telefone = telefone.Text,
-                Endereco = endereco.Text,
-                Nascimento = nascimento.Text,
-                Sexo = sexo.Text,
-                CPF = CPF.Text,
+                Email = edtEmail.Text,
+                Telefone = edtTelefone.Text,
+                Endereco = edtEndereco.Text,
+                Nascimento = edtNascimento.Text,
+                Sexo = edtSexo.Text,
+                CPF = edtCPF.Text,
             };
 
-            // RequestApi request = new RequestApi();
-            //var resposta = request.AtualizarAtleta(atleta);
+            RequestApi request = new RequestApi();
+            var resposta = request.IncluirAtleta(atleta);
 
             //LoadData();
             MessageBox.Show("Informações Salvas!");
