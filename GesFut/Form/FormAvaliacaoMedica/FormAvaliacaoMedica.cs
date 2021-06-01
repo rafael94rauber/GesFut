@@ -12,6 +12,12 @@ namespace GesFut
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Calculo de Aptidao
+            int aptidao = (Convert.ToInt32(txtFadiga.Text) + Convert.ToInt32(txtFitness.Text)) / 2;
+
+            MessageBox.Show("Atleta com " + aptidao + "% de aptidão para o próximo jogo");
+
+
             var avaliacao = new AvaliacaoMedica
             {
                // CodigoAtleta = Convert.ToInt32(txtCodigoAtleta.Text),
@@ -69,6 +75,11 @@ namespace GesFut
         }
 
         private void chkLesao_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }

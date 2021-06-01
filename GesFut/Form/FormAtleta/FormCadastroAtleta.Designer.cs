@@ -45,17 +45,11 @@ namespace GesFut
             this.edtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.edtSexo = new System.Windows.Forms.TextBox();
             this.btnToAvaliacaoMedica = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtFCMaxima = new System.Windows.Forms.TextBox();
-            this.txtFCMinima = new System.Windows.Forms.TextBox();
-            this.txtFCMedia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // salvarAtleta
             // 
-            this.salvarAtleta.Location = new System.Drawing.Point(490, 312);
+            this.salvarAtleta.Location = new System.Drawing.Point(490, 261);
             this.salvarAtleta.Name = "salvarAtleta";
             this.salvarAtleta.Size = new System.Drawing.Size(75, 22);
             this.salvarAtleta.TabIndex = 0;
@@ -84,7 +78,7 @@ namespace GesFut
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 259);
+            this.label5.Location = new System.Drawing.Point(23, 208);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 15);
             this.label5.TabIndex = 6;
@@ -146,7 +140,7 @@ namespace GesFut
             // 
             // edtEndereco
             // 
-            this.edtEndereco.Location = new System.Drawing.Point(133, 256);
+            this.edtEndereco.Location = new System.Drawing.Point(133, 205);
             this.edtEndereco.Name = "edtEndereco";
             this.edtEndereco.Size = new System.Drawing.Size(432, 23);
             this.edtEndereco.TabIndex = 13;
@@ -183,7 +177,7 @@ namespace GesFut
             // 
             // btnToAvaliacaoMedica
             // 
-            this.btnToAvaliacaoMedica.Location = new System.Drawing.Point(23, 311);
+            this.btnToAvaliacaoMedica.Location = new System.Drawing.Point(23, 260);
             this.btnToAvaliacaoMedica.Name = "btnToAvaliacaoMedica";
             this.btnToAvaliacaoMedica.Size = new System.Drawing.Size(108, 22);
             this.btnToAvaliacaoMedica.TabIndex = 19;
@@ -191,65 +185,11 @@ namespace GesFut
             this.btnToAvaliacaoMedica.UseVisualStyleBackColor = true;
             this.btnToAvaliacaoMedica.Click += new System.EventHandler(this.btnToAvaliacaoMedica_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 177);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "FC Máxima";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(194, 176);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 15);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "FC em repouso";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(397, 176);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 15);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "FC Média";
-            // 
-            // txtFCMaxima
-            // 
-            this.txtFCMaxima.Location = new System.Drawing.Point(23, 196);
-            this.txtFCMaxima.Name = "txtFCMaxima";
-            this.txtFCMaxima.Size = new System.Drawing.Size(100, 23);
-            this.txtFCMaxima.TabIndex = 23;
-            // 
-            // txtFCMinima
-            // 
-            this.txtFCMinima.Location = new System.Drawing.Point(194, 196);
-            this.txtFCMinima.Name = "txtFCMinima";
-            this.txtFCMinima.Size = new System.Drawing.Size(100, 23);
-            this.txtFCMinima.TabIndex = 24;
-            // 
-            // txtFCMedia
-            // 
-            this.txtFCMedia.Location = new System.Drawing.Point(397, 196);
-            this.txtFCMedia.Name = "txtFCMedia";
-            this.txtFCMedia.Size = new System.Drawing.Size(100, 23);
-            this.txtFCMedia.TabIndex = 25;
-            // 
             // FormCadastroAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 345);
-            this.Controls.Add(this.txtFCMedia);
-            this.Controls.Add(this.txtFCMinima);
-            this.Controls.Add(this.txtFCMaxima);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(584, 375);
             this.Controls.Add(this.btnToAvaliacaoMedica);
             this.Controls.Add(this.edtTelefone);
             this.Controls.Add(this.edtCPF);
@@ -292,11 +232,5 @@ namespace GesFut
         private System.Windows.Forms.MaskedTextBox edtTelefone;
         private System.Windows.Forms.TextBox edtSexo;
         private System.Windows.Forms.Button btnToAvaliacaoMedica;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtFCMaxima;
-        private System.Windows.Forms.TextBox txtFCMinima;
-        private System.Windows.Forms.TextBox txtFCMedia;
     }
 }
