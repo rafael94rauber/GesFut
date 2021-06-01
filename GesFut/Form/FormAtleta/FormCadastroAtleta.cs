@@ -80,12 +80,10 @@ namespace GesFut
 
             //LoadData();
             MessageBox.Show("Informações Salvas!");
-        }
-
-        private void btnToAvaliacaoMedica_Click(object sender, EventArgs e)
+    private void btnToAvaliacaoMedica_Click(object sender, EventArgs e)
         {
-            FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica();
-            formAvaliacaoMedica.Show();
+            FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica(this.atleta.CodigoAtleta);
+            formAvaliacaoMedica.ShowDialog();
         }
     }
 }
