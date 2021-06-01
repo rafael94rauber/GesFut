@@ -16,6 +16,7 @@ namespace GesFut
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = await client.PostAsJsonAsync("AvaliacaoMedicaController/InserirAvaliacao", avaliacao);
+            
             response.EnsureSuccessStatusCode();
 
             // return URI of the created resource.
@@ -28,6 +29,7 @@ namespace GesFut
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = await client.PostAsJsonAsync("AtletaController/InserirAtleta", atleta);
+            
             response.EnsureSuccessStatusCode();
 
             // return URI of the created resource.
