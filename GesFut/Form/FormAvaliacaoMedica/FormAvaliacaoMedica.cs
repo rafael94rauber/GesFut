@@ -14,7 +14,7 @@ namespace GesFut
         {
             var avaliacao = new AvaliacaoMedica
             {
-                CodigoAtleta = Convert.ToInt32(txtCodigoAtleta.Text),
+               // CodigoAtleta = Convert.ToInt32(txtCodigoAtleta.Text),
                 DataAvaliacao = DateTime.Now,
                 UsuarioResponsavel = 1, // admin
                 Peso = Convert.ToDouble(txtPeso.Text),
@@ -59,7 +59,7 @@ namespace GesFut
 
         public void LimpaTela()
         {
-            txtCodigoAtleta.Text = "";
+         
             txtPeso.Text = "";
             txtTemperaturaCorporal.Text = "";
             txtPressao.Text = "";
