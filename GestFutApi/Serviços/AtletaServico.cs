@@ -13,6 +13,7 @@ namespace GesFutApi.Servico
                    $"{atleta.CPF}, {atleta.DataNascimento.ToString("yyyy-MM-dd")}, {atleta.Altura});";
 
         }
+
         public static String GetUpdate(Atleta atleta)
         {
             return $"update atleta set" +
@@ -23,6 +24,7 @@ namespace GesFutApi.Servico
                    $"where codigo_atleta = {atleta.CodigoAtleta};";
 
         }
+
         public static String GetDelete(Atleta atleta)
         {
             return $"DELETE FROM atleta WHERE codigo_atleta = {atleta.CodigoAtleta}";
