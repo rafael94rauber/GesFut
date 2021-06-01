@@ -42,3 +42,5 @@ create table avaliacao_medica (codigo_avaliacao bigserial primary key,
 							   );
 alter table avaliacao_medica add constraint fk_avaliacao_medica_atleta foreign key (codigo_atleta) references atleta(codigo_atleta);
 alter table avaliacao_medica add constraint fk_avaliacao_medica_usuario foreign key (usuario_responsavel) references usuario(codigo_usuario);
+
+create table jogo (codigo_jogo bigserial primary key, time_rival varchar(100), data_hora timestamp);
