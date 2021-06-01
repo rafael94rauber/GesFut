@@ -72,14 +72,16 @@ namespace GesFut
                 this.atleta.DataNascimento = Convert.ToDateTime(edtNascimento.Text);
                 this.atleta.Sexo = edtSexo.Text;
                 this.atleta.CPF = edtCPF.Text;
-                };
-            }
+            };
+
 
             RequestApi request = new RequestApi();
             var resposta = request.IncluirAtleta(atleta);
 
             //LoadData();
             MessageBox.Show("Informações Salvas!");
+        }
+
     private void btnToAvaliacaoMedica_Click(object sender, EventArgs e)
         {
             FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica(this.atleta.CodigoAtleta);
