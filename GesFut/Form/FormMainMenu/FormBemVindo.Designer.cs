@@ -31,7 +31,6 @@ namespace GesFut
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnCadastroAtleta = new System.Windows.Forms.Button();
-            this.btnAvaliacaoMedia = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -55,16 +54,6 @@ namespace GesFut
             this.btnCadastroAtleta.UseVisualStyleBackColor = true;
             this.btnCadastroAtleta.Click += new System.EventHandler(this.btnCadastroAtleta_Click);
             // 
-            // btnAvaliacaoMedia
-            // 
-            this.btnAvaliacaoMedia.Location = new System.Drawing.Point(244, 72);
-            this.btnAvaliacaoMedia.Name = "btnAvaliacaoMedia";
-            this.btnAvaliacaoMedia.Size = new System.Drawing.Size(129, 92);
-            this.btnAvaliacaoMedia.TabIndex = 2;
-            this.btnAvaliacaoMedia.Text = "Avaliação Médica";
-            this.btnAvaliacaoMedia.UseVisualStyleBackColor = true;
-            this.btnAvaliacaoMedia.Click += new System.EventHandler(this.btnAvaliacaoMedia_Click);
-            // 
             // btnSair
             // 
             this.btnSair.Location = new System.Drawing.Point(713, 415);
@@ -81,7 +70,6 @@ namespace GesFut
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnAvaliacaoMedia);
             this.Controls.Add(this.btnCadastroAtleta);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -97,7 +85,6 @@ namespace GesFut
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCadastroAtleta;
-        private System.Windows.Forms.Button btnAvaliacaoMedia;
         private System.Windows.Forms.Button btnSair;
     }
 }

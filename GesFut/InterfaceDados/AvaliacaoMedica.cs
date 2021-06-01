@@ -12,5 +12,7 @@ namespace GesFut
         public int BatimentosCardiacos { get; set; }
         public string Alergias { get; set; }
         public bool Lesao { get; set; }
+        public int Fadiga { get; set; }
+        public int Fitness { get; set; }
     }
 }

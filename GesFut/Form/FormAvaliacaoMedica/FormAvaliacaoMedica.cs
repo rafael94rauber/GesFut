@@ -5,16 +5,18 @@ namespace GesFut
 {
     public partial class FormAvaliacaoMedica : Form
     {
-        public FormAvaliacaoMedica()
+        private int CodigoAtleta;
+        public FormAvaliacaoMedica(int CodigoAtleta)
         {
             InitializeComponent();
+            this.CodigoAtleta = CodigoAtleta;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var avaliacao = new AvaliacaoMedica
             {
-               // CodigoAtleta = Convert.ToInt32(txtCodigoAtleta.Text),
+                CodigoAtleta = this.CodigoAtleta,
                 DataAvaliacao = DateTime.Now,
                 UsuarioResponsavel = 1, // admin
                 Peso = Convert.ToDouble(txtPeso.Text),

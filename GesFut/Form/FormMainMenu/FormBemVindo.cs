@@ -26,12 +26,6 @@ namespace GesFut
 
         }
 
-        private void btnAvaliacaoMedia_Click(object sender, EventArgs e)
-        {
-            FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica();
-            formAvaliacaoMedica.Show();
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();

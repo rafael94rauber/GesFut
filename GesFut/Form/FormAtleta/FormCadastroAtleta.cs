@@ -10,9 +10,11 @@ namespace GesFut
 {
     public partial class FormCadastroAtleta : Form
     {
+        private Atleta atleta;
         public FormCadastroAtleta()
         {
             InitializeComponent();
+            atleta = null;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -47,17 +49,31 @@ namespace GesFut
 
         private void salvarAtleta_Click(object sender, EventArgs e)
         {
-            var atleta = new Atleta(0)
+            if (this.atleta == null)
             {
-                //   CodigoAtleta = Cod
-                Nome = edtNome.Text,
-                Email = edtEmail.Text,
-                Telefone = edtTelefone.Text,
-                Endereco = edtEndereco.Text,
-                DataNascimento = Convert.ToDateTime(edtNascimento.Text),
-                Sexo = edtSexo.Text,
-                CPF = edtCPF.Text,
-            };
+                this.atleta = new Atleta(0)
+                {
+                    //   CodigoAtleta = Cod
+                    Nome = edtNome.Text,
+                    Email = edtEmail.Text,
+                    Telefone = edtTelefone.Text,
+                    Endereco = edtEndereco.Text,
+                    DataNascimento = Convert.ToDateTime(edtNascimento.Text),
+                    Sexo = edtSexo.Text,
+                    CPF = edtCPF.Text,
+                };
+            }
+            else
+            {
+                this.atleta.Nome = edtNome.Text;
+                this.atleta.Email = edtEmail.Text;
+                this.atleta.Telefone = edtTelefone.Text;
+                this.atleta.Endereco = edtEndereco.Text;
+                this.atleta.DataNascimento = Convert.ToDateTime(edtNascimento.Text);
+                this.atleta.Sexo = edtSexo.Text;
+                this.atleta.CPF = edtCPF.Text;
+                };
+            }
 
             RequestApi request = new RequestApi();
             var resposta = request.IncluirAtleta(atleta);
