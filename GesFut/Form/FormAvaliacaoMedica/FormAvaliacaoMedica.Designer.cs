@@ -49,12 +49,17 @@ namespace GesFut
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.dbgAvaliacoes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtFadiga = new System.Windows.Forms.TextBox();
+            this.Fitness = new System.Windows.Forms.Label();
+            this.txtFitness = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacoes)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(464, 133);
+            this.button1.Location = new System.Drawing.Point(464, 231);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -210,7 +215,7 @@ namespace GesFut
             this.dbgAvaliacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbgAvaliacoes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dbgAvaliacoes.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dbgAvaliacoes.Location = new System.Drawing.Point(12, 191);
+            this.dbgAvaliacoes.Location = new System.Drawing.Point(12, 276);
             this.dbgAvaliacoes.Name = "dbgAvaliacoes";
             this.dbgAvaliacoes.ReadOnly = true;
             this.dbgAvaliacoes.RowTemplate.Height = 25;
@@ -221,17 +226,64 @@ namespace GesFut
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 132);
+            this.label1.Location = new System.Drawing.Point(19, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 15);
             this.label1.TabIndex = 26;
             this.label1.Text = "Lesão";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 132);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 15);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Lesão";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 168);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 15);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Fadiga";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // txtFadiga
+            // 
+            this.txtFadiga.Location = new System.Drawing.Point(149, 159);
+            this.txtFadiga.Name = "txtFadiga";
+            this.txtFadiga.Size = new System.Drawing.Size(100, 23);
+            this.txtFadiga.TabIndex = 28;
+            // 
+            // Fitness
+            // 
+            this.Fitness.AutoSize = true;
+            this.Fitness.Location = new System.Drawing.Point(301, 166);
+            this.Fitness.Name = "Fitness";
+            this.Fitness.Size = new System.Drawing.Size(43, 15);
+            this.Fitness.TabIndex = 29;
+            this.Fitness.Text = "Fitness";
+            // 
+            // txtFitness
+            // 
+            this.txtFitness.Location = new System.Drawing.Point(439, 159);
+            this.txtFitness.Name = "txtFitness";
+            this.txtFitness.Size = new System.Drawing.Size(100, 23);
+            this.txtFitness.TabIndex = 30;
+            // 
             // FormAvaliacaoMedica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 482);
+            this.ClientSize = new System.Drawing.Size(554, 567);
+            this.Controls.Add(this.txtFitness);
+            this.Controls.Add(this.Fitness);
+            this.Controls.Add(this.txtFadiga);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dbgAvaliacoes);
             this.Controls.Add(this.label11);
@@ -282,6 +334,11 @@ namespace GesFut
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.DataGridView dbgAvaliacoes;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtFadiga;
+        private System.Windows.Forms.Label Fitness;
+        private System.Windows.Forms.TextBox txtFitness;
     }
 }
 
