@@ -16,28 +16,49 @@ namespace GestFutApi.Controllers
         [HttpPost]
         public async Task<object> InserirAtleta([FromBody] Atleta atleta)
         {
-            var insert = AtletaServico.GetInsert(atleta);
-            var conexaoDB = new ConexaoDB();
+            try
+            {
+                var insert = AtletaServico.GetInsert(atleta);
+                var conexaoDB = new ConexaoDB();
 
-            return conexaoDB.InsertDados(insert);
+                return conexaoDB.InsertDados(insert);
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
         }
 
         [HttpPost]
         public async Task<object> AtualizarAtleta([FromBody] Atleta atleta)
         {
-            var update = AtletaServico.GetUpdate(atleta);
-            var conexaoDB = new ConexaoDB();
+            try
+            {
+                var update = AtletaServico.GetUpdate(atleta);
+                var conexaoDB = new ConexaoDB();
 
-            return conexaoDB.AtualizarDados(update);
+                return conexaoDB.AtualizarDados(update);
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
         }
 
         [HttpPost]
         public async Task<object> DeletarAtleta([FromBody] Atleta atleta)
         {
-            var delete = AtletaServico.GetDelete(atleta);
-            var conexaoDB = new ConexaoDB();
+            try
+            {
+                var delete = AtletaServico.GetDelete(atleta);
+                var conexaoDB = new ConexaoDB();
 
-            return conexaoDB.DeletarDados(delete);
+                return conexaoDB.DeletarDados(delete);
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }            
         }
     }
 }
