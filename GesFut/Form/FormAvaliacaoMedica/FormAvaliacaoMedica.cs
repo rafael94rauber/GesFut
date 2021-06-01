@@ -30,7 +30,9 @@ namespace GesFut
                 Pressao = txtPressao.Text,
                 BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text),
                 Alergias = txtAlergias.Text,
-                Lesao = chkLesao.Checked
+                Lesao = chkLesao.Checked,
+                Fadiga = Convert.ToInt32(txtFadiga.Text),
+                Fitness = Convert.ToInt32(txtFitness.Text)
             };
 
             RequestApi request = new RequestApi();
