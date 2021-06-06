@@ -1,16 +1,13 @@
-﻿namespace GesFut
+﻿using System;
+
+namespace GesFut
 {
     public class AvaliacaoMedicaBase
     {
         public double TemperaturaCorporal { get; set; }
-        public double TemperaturaCorporal { get; set; }
-        public String Pressao { get; set; }
         public string Pressao { get; set; }
         public int BatimentosCardiacos { get; set; }
-        public int BatimentosCardiacos { get; set; }
-        public String Alergias { get; set; }
         public string Alergias { get; set; }
-        public Boolean Lesao { get; set; }
         public bool Lesao { get; set; }
         public int Fadiga { get; set; }
         public int Fitness { get; set; }
