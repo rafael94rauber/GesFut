@@ -49,37 +49,40 @@ namespace GesFut
 
         private void salvarAtleta_Click(object sender, EventArgs e)
         {
-            if (this.atleta == null)
+            if (validaTela())
             {
-                this.atleta = new Atleta(0)
+                if (this.atleta == null)
                 {
-                    //   CodigoAtleta = Cod
-                    Nome = edtNome.Text,
-                    Email = edtEmail.Text,
-                    Telefone = edtTelefone.Text,
-                    Endereco = edtEndereco.Text,
-                    DataNascimento = Convert.ToDateTime(edtNascimento.Text),
-                    Sexo = edtSexo.Text,
-                    CPF = edtCPF.Text,
+                    this.atleta = new Atleta(0)
+                    {
+                        //   CodigoAtleta = Cod
+                        Nome = edtNome.Text,
+                        Email = edtEmail.Text,
+                        Telefone = edtTelefone.Text,
+                        Endereco = edtEndereco.Text,
+                        DataNascimento = Convert.ToDateTime(edtNascimento.Text),
+                        Sexo = edtSexo.Text,
+                        CPF = edtCPF.Text
+                    };
+                }
+                else
+                {
+                    this.atleta.Nome = edtNome.Text;
+                    this.atleta.Email = edtEmail.Text;
+                    this.atleta.Telefone = edtTelefone.Text;
+                    this.atleta.Endereco = edtEndereco.Text;
+                    this.atleta.DataNascimento = Convert.ToDateTime(edtNascimento.Text);
+                    this.atleta.Sexo = edtSexo.Text;
+                    this.atleta.CPF = edtCPF.Text;
                 };
+
+
+                RequestApi request = new RequestApi();
+                var resposta = request.IncluirAtleta(atleta);
+
+                //LoadData();
+                MessageBox.Show("Informações Salvas!");
             }
-            else
-            {
-                this.atleta.Nome = edtNome.Text;
-                this.atleta.Email = edtEmail.Text;
-                this.atleta.Telefone = edtTelefone.Text;
-                this.atleta.Endereco = edtEndereco.Text;
-                this.atleta.DataNascimento = Convert.ToDateTime(edtNascimento.Text);
-                this.atleta.Sexo = edtSexo.Text;
-                this.atleta.CPF = edtCPF.Text;
-            };
-
-
-            RequestApi request = new RequestApi();
-            var resposta = request.IncluirAtleta(atleta);
-
-            //LoadData();
-            MessageBox.Show("Informações Salvas!");
         }
 
     private void btnToAvaliacaoMedica_Click(object sender, EventArgs e)
@@ -87,5 +90,43 @@ namespace GesFut
             FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica(this.atleta.CodigoAtleta);
             formAvaliacaoMedica.ShowDialog();
         }
+        private Boolean validaTela()
+        {
+            
+            String mensagem = "";
+            if (edtNome.Text.Trim() == "")
+            {
+                mensagem += "  Nome\n";
+            }
+            
+            if(edtCPF.Text.Trim() == "")
+            {
+                mensagem += "  CPF";
+            }
+
+            try
+            {
+                Convert.ToDateTime(edtNascimento.Text.Trim());
+            }
+            catch
+            {
+                mensagem += "  Data de Nascimento\n";
+            }
+
+
+            
+            if (mensagem != "")
+            {
+                mensagem = "Obrigatório informar os campos: \n" + mensagem;
+                MessageBox.Show(mensagem);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
+
+    
 }

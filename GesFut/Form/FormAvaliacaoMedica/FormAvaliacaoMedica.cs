@@ -43,12 +43,6 @@ namespace GesFut
             MessageBox.Show("Informações Salvas!");
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("jnksdvsdnjksdvjk");
-
-        }
-
         private void label8_Click(object sender, EventArgs e)
         {
 

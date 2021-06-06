@@ -44,7 +44,6 @@ namespace GesFut
             this.edtCPF = new System.Windows.Forms.MaskedTextBox();
             this.edtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.edtSexo = new System.Windows.Forms.TextBox();
-            this.btnToAvaliacaoMedica = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // salvarAtleta
@@ -175,22 +174,11 @@ namespace GesFut
             this.edtSexo.Size = new System.Drawing.Size(100, 23);
             this.edtSexo.TabIndex = 12;
             // 
-            // btnToAvaliacaoMedica
-            // 
-            this.btnToAvaliacaoMedica.Location = new System.Drawing.Point(23, 260);
-            this.btnToAvaliacaoMedica.Name = "btnToAvaliacaoMedica";
-            this.btnToAvaliacaoMedica.Size = new System.Drawing.Size(108, 22);
-            this.btnToAvaliacaoMedica.TabIndex = 19;
-            this.btnToAvaliacaoMedica.Text = "Ir p/ Avaliação Médica";
-            this.btnToAvaliacaoMedica.UseVisualStyleBackColor = true;
-            this.btnToAvaliacaoMedica.Click += new System.EventHandler(this.btnToAvaliacaoMedica_Click);
-            // 
             // FormCadastroAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 375);
-            this.Controls.Add(this.btnToAvaliacaoMedica);
+            this.ClientSize = new System.Drawing.Size(584, 297);
             this.Controls.Add(this.edtTelefone);
             this.Controls.Add(this.edtCPF);
             this.Controls.Add(this.edtEmail);
@@ -231,6 +219,5 @@ namespace GesFut
         private System.Windows.Forms.MaskedTextBox edtCPF;
         private System.Windows.Forms.MaskedTextBox edtTelefone;
         private System.Windows.Forms.TextBox edtSexo;
-        private System.Windows.Forms.Button btnToAvaliacaoMedica;
     }
 }

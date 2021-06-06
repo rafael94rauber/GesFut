@@ -179,7 +179,6 @@ namespace GesFut
             this.label8.Size = new System.Drawing.Size(49, 15);
             this.label8.TabIndex = 15;
             this.label8.Text = "Alergias";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // chkLesao
             // 
@@ -249,7 +248,6 @@ namespace GesFut
             this.label10.Size = new System.Drawing.Size(42, 15);
             this.label10.TabIndex = 27;
             this.label10.Text = "Fadiga";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtFadiga
             // 
