@@ -56,9 +56,9 @@ namespace GesFut
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(713, 415);
+            this.btnSair.Location = new System.Drawing.Point(692, 404);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.Size = new System.Drawing.Size(96, 34);
             this.btnSair.TabIndex = 4;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;

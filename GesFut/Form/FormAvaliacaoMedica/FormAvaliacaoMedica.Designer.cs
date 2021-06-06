@@ -29,7 +29,6 @@ namespace GesFut
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.txtTempoJogo = new System.Windows.Forms.TextBox();
             this.txtPercentualGordura = new System.Windows.Forms.TextBox();
             this.txtVelocidadeMedia = new System.Windows.Forms.TextBox();
