@@ -14,5 +14,9 @@ insert into avaliacao_desempenho (codigo_atleta,usuario_responsavel,peso,percent
 insert into avaliacao_desempenho (codigo_atleta,usuario_responsavel,peso,percentual_gordura) values (5,1,83,9);
 insert into avaliacao_desempenho (codigo_atleta,usuario_responsavel,peso,percentual_gordura) values (6,1,84,9);
 
+insert into jogo (time_rival, data_hora) values ('Gremio', '01.01.2022');
+insert into jogo (time_rival, data_hora) values ('Internacional', '20.07.2021');
+insert into jogo (time_rival, data_hora) values ('Juventude',     '03.06.2022');
+insert into jogo (time_rival, data_hora) values ('Flamengo', '09.09.2022');
 
 
