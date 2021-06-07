@@ -53,7 +53,7 @@ namespace GesFut
             this.txtFadiga = new System.Windows.Forms.TextBox();
             this.Fitness = new System.Windows.Forms.Label();
             this.txtFitness = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            
             // 
             // button1
             // 
@@ -255,40 +255,7 @@ namespace GesFut
             this.txtFitness.Name = "txtFitness";
             this.txtFitness.Size = new System.Drawing.Size(100, 23);
             this.txtFitness.TabIndex = 30;
-            // 
-            // FormAvaliacaoMedica
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 264);
-            this.Controls.Add(this.txtFitness);
-            this.Controls.Add(this.Fitness);
-            this.Controls.Add(this.txtFadiga);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtPeso);
-            this.Controls.Add(this.chkLesao);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtAlergias);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtBatimentosCardiacos);
-            this.Controls.Add(this.txtPressao);
-            this.Controls.Add(this.txtTemperaturaCorporal);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtVelocidadeMedia);
-            this.Controls.Add(this.txtPercentualGordura);
-            this.Controls.Add(this.txtTempoJogo);
-            this.Controls.Add(this.button1);
-            this.Name = "FormAvaliacaoMedica";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+          
 
         }
 
