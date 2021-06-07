@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GesFut
 {
-    public class Atleta
+    public class Atleta: IBaseSQL
     {
         public int CodigoAtleta { get; }
         public String Nome { get; set; }
@@ -36,6 +36,34 @@ namespace GesFut
         public void adicionarAvaliacaoMedica(AvaliacaoMedica avaliacaoMedica)
         {
             avaliacoesMedicas.Add(avaliacaoMedica);
+        }
+
+        public String GetInsert()
+        {
+            return $"insert into atleta (nome, cpf, data_nascimento) values ('{Nome}'," +
+                   $"'{CPF}', '{DataNascimento.ToString("yyyy-MM-dd")}');";
+
+        }
+
+        public String GetUpdate()
+        {
+            return $"update atleta set" +
+                   $"  nome = {Nome},  " +
+                   $"  cpf = {CPF}," +
+                   $"  data_nascimento = {DataNascimento}," +
+                   $"where codigo_atleta = {CodigoAtleta};";
+
+        }
+
+        public String GetDelete()
+        {
+            return $"DELETE FROM atleta WHERE codigo_atleta = {CodigoAtleta}";
+
+        }
+
+        public String GetCampoCodigo()
+        {
+            return "codigo_atleta";
         }
 
     }

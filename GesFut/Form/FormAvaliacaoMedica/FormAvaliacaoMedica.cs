@@ -14,33 +14,36 @@ namespace GesFut
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Calculo de Aptidao
-            int aptidao = (Convert.ToInt32(txtFadiga.Text) + Convert.ToInt32(txtFitness.Text)) / 2;
-
-            MessageBox.Show("Atleta com " + aptidao + "% de aptidão para o próximo jogo");
-
-
-            var avaliacao = new AvaliacaoMedica
+            if (validaTela())
             {
-                CodigoAtleta = this.CodigoAtleta,
-                DataAvaliacao = DateTime.Now,
-                UsuarioResponsavel = 1, // admin
-                Peso = Convert.ToDouble(txtPeso.Text),
-                TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text),
-                Pressao = txtPressao.Text,
-                BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text),
-                Alergias = txtAlergias.Text,
-                Lesao = chkLesao.Checked,
-                Fadiga = Convert.ToInt32(txtFadiga.Text),
-                Fitness = Convert.ToInt32(txtFitness.Text)
-            };
 
-            RequestApi request = new RequestApi();
-            var resposta = request.AtualizarAvaliacao(avaliacao);
+                //Calculo de Aptidao
+                int aptidao = (Convert.ToInt32(txtFadiga.Text) + Convert.ToInt32(txtFitness.Text)) / 2;
 
-            LoadData();
-            LimpaTela();
-            MessageBox.Show("Informações Salvas!");
+                MessageBox.Show("Atleta com " + aptidao + "% de aptidão para o próximo jogo");
+
+
+                var avaliacao = new AvaliacaoMedica
+                {
+                    CodigoAtleta = this.CodigoAtleta,
+                    DataAvaliacao = DateTime.Now,
+                    UsuarioResponsavel = 1, // admin
+                    Peso = Convert.ToDouble(txtPeso.Text),
+                    TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text),
+                    Pressao = txtPressao.Text,
+                    BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text),
+                    Alergias = txtAlergias.Text,
+                    Lesao = chkLesao.Checked,
+                    Fadiga = Convert.ToInt32(txtFadiga.Text),
+                    Fitness = Convert.ToInt32(txtFitness.Text)
+                };
+
+                ConexaoDB conexao = new ConexaoDB();
+                conexao.InsertDados(avaliacao);
+
+                LimpaTela();
+                MessageBox.Show("Informações Salvas!");
+            }
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -81,5 +84,63 @@ namespace GesFut
         {
 
         }
+
+        private bool validaTela()
+        {
+            string mensagem = "";
+            try
+            { 
+                Convert.ToDouble(txtPeso.Text);
+            } catch {
+                mensagem += "  Peso\n";
+            }
+            try
+            {
+                Convert.ToDouble(txtTemperaturaCorporal.Text);
+            }
+            catch
+            {
+                mensagem += "  Temperatura Corporal\n";
+            }
+
+            try
+            {
+                Convert.ToInt32(txtBatimentosCardiacos.Text);
+            }
+            catch
+            {
+                mensagem += "  Batimentos Cardíacoszn";
+            }
+
+            try
+            {
+                Convert.ToInt32(txtFadiga.Text);
+            }
+            catch
+            {
+                mensagem += "  Fadiga\n";
+            }
+
+            try
+            {
+                Convert.ToInt32(txtFitness.Text);
+            }
+            catch
+            {
+                mensagem += "  Fitness";
+            }
+
+            if (mensagem == "")
+            {
+                return true;
+            }
+            else
+            {
+                mensagem = "Obrigatório informar os campos: \n" + mensagem;
+                MessageBox.Show(mensagem);
+                return false;
+            }
+
+        } 
     }
 }

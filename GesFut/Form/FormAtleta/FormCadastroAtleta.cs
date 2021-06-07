@@ -64,6 +64,8 @@ namespace GesFut
                         Sexo = edtSexo.Text,
                         CPF = edtCPF.Text
                     };
+                    ConexaoDB conexao = new ConexaoDB();
+                    conexao.InsertDados(atleta);
                 }
                 else
                 {
@@ -74,11 +76,12 @@ namespace GesFut
                     this.atleta.DataNascimento = Convert.ToDateTime(edtNascimento.Text);
                     this.atleta.Sexo = edtSexo.Text;
                     this.atleta.CPF = edtCPF.Text;
+                    ConexaoDB conexao = new ConexaoDB();
+                    conexao.AtualizarDados(atleta);
                 };
 
 
-                RequestApi request = new RequestApi();
-                var resposta = request.IncluirAtleta(atleta);
+                
 
                 //LoadData();
                 MessageBox.Show("Informações Salvas!");
@@ -90,7 +93,7 @@ namespace GesFut
             FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica(this.atleta.CodigoAtleta);
             formAvaliacaoMedica.ShowDialog();
         }
-        private Boolean validaTela()
+        private bool validaTela()
         {
             
             String mensagem = "";
@@ -113,11 +116,18 @@ namespace GesFut
                 mensagem += "  Data de Nascimento\n";
             }
 
-
-            
             if (mensagem != "")
             {
                 mensagem = "Obrigatório informar os campos: \n" + mensagem;
+            }
+
+            if (edtCPF.Text.Length != 11 )
+            {
+                mensagem += "\nCPF invalido";
+            }
+
+            if (mensagem != "")
+            { 
                 MessageBox.Show(mensagem);
                 return false;
             }

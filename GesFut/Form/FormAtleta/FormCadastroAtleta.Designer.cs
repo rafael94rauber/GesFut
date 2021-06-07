@@ -41,9 +41,9 @@ namespace GesFut
             this.edtNascimento = new System.Windows.Forms.TextBox();
             this.edtEndereco = new System.Windows.Forms.TextBox();
             this.edtEmail = new System.Windows.Forms.TextBox();
-            this.edtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.edtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.edtSexo = new System.Windows.Forms.TextBox();
+            this.edtTelefone = new System.Windows.Forms.TextBox();
+            this.edtCPF = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // salvarAtleta
@@ -151,22 +151,6 @@ namespace GesFut
             this.edtEmail.Size = new System.Drawing.Size(100, 23);
             this.edtEmail.TabIndex = 15;
             // 
-            // edtCPF
-            // 
-            this.edtCPF.Location = new System.Drawing.Point(465, 125);
-            this.edtCPF.Mask = "000,000,000-00";
-            this.edtCPF.Name = "edtCPF";
-            this.edtCPF.Size = new System.Drawing.Size(100, 23);
-            this.edtCPF.TabIndex = 17;
-            // 
-            // edtTelefone
-            // 
-            this.edtTelefone.Location = new System.Drawing.Point(133, 125);
-            this.edtTelefone.Mask = "(99) 00000-0000";
-            this.edtTelefone.Name = "edtTelefone";
-            this.edtTelefone.Size = new System.Drawing.Size(100, 23);
-            this.edtTelefone.TabIndex = 18;
-            // 
             // edtSexo
             // 
             this.edtSexo.Location = new System.Drawing.Point(465, 81);
@@ -174,13 +158,27 @@ namespace GesFut
             this.edtSexo.Size = new System.Drawing.Size(100, 23);
             this.edtSexo.TabIndex = 12;
             // 
+            // edtTelefone
+            // 
+            this.edtTelefone.Location = new System.Drawing.Point(133, 124);
+            this.edtTelefone.Name = "edtTelefone";
+            this.edtTelefone.Size = new System.Drawing.Size(100, 23);
+            this.edtTelefone.TabIndex = 20;
+            // 
+            // edtCPF
+            // 
+            this.edtCPF.Location = new System.Drawing.Point(465, 125);
+            this.edtCPF.Name = "edtCPF";
+            this.edtCPF.Size = new System.Drawing.Size(100, 23);
+            this.edtCPF.TabIndex = 21;
+            // 
             // FormCadastroAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 297);
-            this.Controls.Add(this.edtTelefone);
             this.Controls.Add(this.edtCPF);
+            this.Controls.Add(this.edtTelefone);
             this.Controls.Add(this.edtEmail);
             this.Controls.Add(this.edtEndereco);
             this.Controls.Add(this.edtSexo);
@@ -216,8 +214,8 @@ namespace GesFut
         private System.Windows.Forms.TextBox edtNascimento;
         private System.Windows.Forms.TextBox edtEndereco;
         private System.Windows.Forms.TextBox edtEmail;
-        private System.Windows.Forms.MaskedTextBox edtCPF;
-        private System.Windows.Forms.MaskedTextBox edtTelefone;
         private System.Windows.Forms.TextBox edtSexo;
+        private System.Windows.Forms.TextBox edtTelefone;
+        private System.Windows.Forms.TextBox edtCPF;
     }
 }

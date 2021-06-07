@@ -29,6 +29,7 @@ namespace GesFut
         /// </summary>
         private void InitializeComponent()
         {
+            this.button1 = new System.Windows.Forms.Button();
             this.txtTempoJogo = new System.Windows.Forms.TextBox();
             this.txtPercentualGordura = new System.Windows.Forms.TextBox();
             this.txtVelocidadeMedia = new System.Windows.Forms.TextBox();
@@ -46,14 +47,12 @@ namespace GesFut
             this.chkLesao = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
-            this.dbgAvaliacoes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtFadiga = new System.Windows.Forms.TextBox();
             this.Fitness = new System.Windows.Forms.Label();
             this.txtFitness = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacoes)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -207,20 +206,6 @@ namespace GesFut
             this.txtPeso.Size = new System.Drawing.Size(100, 23);
             this.txtPeso.TabIndex = 23;
             // 
-            // dbgAvaliacoes
-            // 
-            this.dbgAvaliacoes.AllowUserToAddRows = false;
-            this.dbgAvaliacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dbgAvaliacoes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dbgAvaliacoes.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dbgAvaliacoes.Location = new System.Drawing.Point(12, 276);
-            this.dbgAvaliacoes.Name = "dbgAvaliacoes";
-            this.dbgAvaliacoes.ReadOnly = true;
-            this.dbgAvaliacoes.RowTemplate.Height = 25;
-            this.dbgAvaliacoes.ShowEditingIcon = false;
-            this.dbgAvaliacoes.Size = new System.Drawing.Size(527, 279);
-            this.dbgAvaliacoes.TabIndex = 25;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -275,14 +260,13 @@ namespace GesFut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 567);
+            this.ClientSize = new System.Drawing.Size(554, 264);
             this.Controls.Add(this.txtFitness);
             this.Controls.Add(this.Fitness);
             this.Controls.Add(this.txtFadiga);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dbgAvaliacoes);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.chkLesao);
@@ -303,7 +287,6 @@ namespace GesFut
             this.Controls.Add(this.button1);
             this.Name = "FormAvaliacaoMedica";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacoes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +312,6 @@ namespace GesFut
         private System.Windows.Forms.CheckBox chkLesao;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPeso;
-        private System.Windows.Forms.DataGridView dbgAvaliacoes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

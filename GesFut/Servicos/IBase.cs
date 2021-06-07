@@ -6,8 +6,9 @@ namespace GesFut
 {
     public interface IBaseSQL
     {
-        public abstract String GetInsert();
-        public abstract String GetUpdate();
-        public abstract String GetDelete();
+        public String GetInsert();
+        public String GetUpdate();
+        public String GetDelete();
+        public String GetCampoCodigo();
     }
 }

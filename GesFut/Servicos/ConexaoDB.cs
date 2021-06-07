@@ -3,7 +3,7 @@ using System;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace GesFutApi.Servico
+namespace GesFut
 {
     public class ConexaoDB
     {
@@ -45,66 +45,36 @@ namespace GesFutApi.Servico
             return ds;
         }
 
-        public int InsertDados(string conteudoInsert)
+        public int InsertDados(IBaseSQL dados)
         {
             using var conn = new NpgsqlConnection(ConexaoDb);
             Console.Out.WriteLine("Opening connection");
             conn.Open();
 
-            using var command = new NpgsqlCommand(conteudoInsert, conn);
+            using var command = new NpgsqlCommand(dados.GetInsert(), conn);
 
             int numeroLinhasAfetadas = command.ExecuteNonQuery();
             conn.Close();
             conn.Dispose();
             return numeroLinhasAfetadas;
         }
-        public int AtualizarDados(string conteudoUpdate)
+        public int AtualizarDados(IBaseSQL dados)
         {
             using var conn = new NpgsqlConnection(ConexaoDb);
             conn.Open();
 
-            using var command = new NpgsqlCommand(conteudoUpdate, conn);            
+            using var command = new NpgsqlCommand(dados.GetUpdate(), conn);            
             int numeroLinhasAfetadas = command.ExecuteNonQuery();
 
             conn.Close();
             conn.Dispose();
             return numeroLinhasAfetadas;
         }
-
-        public int AtualizarDados()
+        public int DeletarDados(IBaseSQL dados)
         {
             using var conn = new NpgsqlConnection(ConexaoDb);
             conn.Open();
-
-            using var command = new NpgsqlCommand("UPDATE usuario SET nome = @p1 WHERE nome = @p2", conn);
-            command.Parameters.AddWithValue("p1", "banana");
-            command.Parameters.AddWithValue("p2", "banana");
-            int numeroLinhasAfetadas = command.ExecuteNonQuery();
-
-            conn.Close();
-            conn.Dispose();
-            return numeroLinhasAfetadas;
-        }
-
-        public int DeletarDados(string conteudoDelete)
-        {
-            using var conn = new NpgsqlConnection(ConexaoDb);
-            conn.Open();
-            using var command = new NpgsqlCommand(conteudoDelete, conn);
-            int numeroLinhasAfetadas = command.ExecuteNonQuery();
-            conn.Close();
-            conn.Dispose();
-            return numeroLinhasAfetadas;
-        }
-
-        public int DeletarDados()
-        {
-            using var conn = new NpgsqlConnection(ConexaoDb);
-            conn.Open();
-
-            using var command = new NpgsqlCommand("DELETE FROM usuario WHERE nome = @p1", conn);
-            command.Parameters.AddWithValue("p1", "orange");
-
+            using var command = new NpgsqlCommand(dados.GetDelete(), conn);
             int numeroLinhasAfetadas = command.ExecuteNonQuery();
             conn.Close();
             conn.Dispose();
