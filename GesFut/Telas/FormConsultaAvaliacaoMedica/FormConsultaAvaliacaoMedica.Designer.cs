@@ -1,5 +1,5 @@
 ﻿
-namespace GesFut.Telas.FormConsultaAvaliacaoMedica
+namespace GesFut
 {
     partial class FormConsultaAvaliacaoMedica
     {

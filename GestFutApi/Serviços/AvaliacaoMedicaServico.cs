@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GesFut;
+﻿using GesFut;
 
 namespace GesFutApi.Servico
 {

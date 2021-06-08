@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using GesFut;
-using GesFut.Telas.FormConsultaAvaliacaoMedica;
 
 
-namespace GesFut.Telas.FormConsultaAtleta
+namespace GesFut
 {
     public partial class FormConsultaAtleta : Form
     {
@@ -36,7 +30,7 @@ namespace GesFut.Telas.FormConsultaAtleta
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            FormConsultaAvaliacaoMedica formConsultaAvaliacaoMedica = new FormConsultaAvaliacaoMedica(CodigoAtleta);
+            FormAvaliacaoMedica formConsultaAvaliacaoMedica = new FormAvaliacaoMedica(CodigoAtleta);
             formConsultaAvaliacaoMedica.ShowDialog();
         }
 
