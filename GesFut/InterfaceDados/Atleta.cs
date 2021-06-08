@@ -66,5 +66,10 @@ namespace GesFut
             return "codigo_atleta";
         }
 
+        public static String GetSQLConsulta()
+        {
+            return "SELECT * FROM atleta order by nome";
+        }
+
     }
 }

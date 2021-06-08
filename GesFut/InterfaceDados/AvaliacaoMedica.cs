@@ -15,9 +15,9 @@ namespace GesFut
         public int Fadiga { get; set; }
         public int Fitness { get; set; }
 
-        public String GetSelect()
+        public static String GetSQLConsulta(int CodigoAtleta)
         {
-            return "Select * from AVALIACAO_MEDICA";
+            return $"Select * from AVALIACAO_MEDICA where codigo_atleta = {CodigoAtleta} order by data_avaliacao desc";
         }
         public String GetDelete()
         {

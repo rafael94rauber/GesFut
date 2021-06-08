@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using GesFut.Telas.FormConsultaAtleta;
 
 namespace GesFut
 {
@@ -17,8 +18,8 @@ namespace GesFut
 
         private void btnCadastroAtleta_Click(object sender, EventArgs e)
         {
-            FormCadastroAtleta formCadastroAtleta = new FormCadastroAtleta();
-            formCadastroAtleta.Show();
+            FormConsultaAtleta formConsultaAtleta = new FormConsultaAtleta();
+            formConsultaAtleta.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)

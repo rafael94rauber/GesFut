@@ -30,7 +30,7 @@ namespace GesFut
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCadastroAtleta = new System.Windows.Forms.Button();
+            this.btnAtleta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,15 +44,15 @@ namespace GesFut
             this.label1.Text = "Bem-Vindo ao GesFut";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // btnCadastroAtleta
+            // btnAtleta
             // 
-            this.btnCadastroAtleta.Location = new System.Drawing.Point(50, 72);
-            this.btnCadastroAtleta.Name = "btnCadastroAtleta";
-            this.btnCadastroAtleta.Size = new System.Drawing.Size(129, 92);
-            this.btnCadastroAtleta.TabIndex = 1;
-            this.btnCadastroAtleta.Text = "Cadastro de Atleta";
-            this.btnCadastroAtleta.UseVisualStyleBackColor = true;
-            this.btnCadastroAtleta.Click += new System.EventHandler(this.btnCadastroAtleta_Click);
+            this.btnAtleta.Location = new System.Drawing.Point(50, 72);
+            this.btnAtleta.Name = "btnAtleta";
+            this.btnAtleta.Size = new System.Drawing.Size(129, 92);
+            this.btnAtleta.TabIndex = 1;
+            this.btnAtleta.Text = "Atleta";
+            this.btnAtleta.UseVisualStyleBackColor = true;
+            this.btnAtleta.Click += new System.EventHandler(this.btnCadastroAtleta_Click);
             // 
             // btnSair
             // 
@@ -70,7 +70,7 @@ namespace GesFut
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnCadastroAtleta);
+            this.Controls.Add(this.btnAtleta);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "FormBemVindo";
@@ -84,7 +84,7 @@ namespace GesFut
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCadastroAtleta;
+        private System.Windows.Forms.Button btnAtleta;
         private System.Windows.Forms.Button btnSair;
     }
 }
