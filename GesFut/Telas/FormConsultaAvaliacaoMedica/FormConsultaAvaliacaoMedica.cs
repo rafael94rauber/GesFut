@@ -27,7 +27,7 @@ namespace GesFut.Telas.FormConsultaAvaliacaoMedica
 
         private void btnCadastrarAvaliacao_Click(object sender, EventArgs e)
         {
-            FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica(1);
+            FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica(CodigoAtleta);
             formAvaliacaoMedica.ShowDialog();
             LoadDados();
         }

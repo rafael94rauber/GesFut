@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using GesFut;
+using GesFut.Telas.FormConsultaAvaliacaoMedica;
 
 
 namespace GesFut.Telas.FormConsultaAtleta
 {
     public partial class FormConsultaAtleta : Form
     {
+        private int CodigoAtleta;
         public FormConsultaAtleta()
         {
             InitializeComponent();
@@ -33,9 +35,14 @@ namespace GesFut.Telas.FormConsultaAtleta
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //dbgAtleta.Selected
-            //FormConsultaAvaliacaoMedica formConsultaAvaliacaoMedica = new FormConsultaAvaliacaoMedica(1);
-            //formConsultaAvaliacaoMedica.ShowDialog();
+
+            FormConsultaAvaliacaoMedica formConsultaAvaliacaoMedica = new FormConsultaAvaliacaoMedica(CodigoAtleta);
+            formConsultaAvaliacaoMedica.ShowDialog();
+        }
+
+        private void dbgAtleta_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            CodigoAtleta = Convert.ToInt32(dbgAtleta.Rows[e.RowIndex].Cells[1].Value.ToString());
         }
     }
 }

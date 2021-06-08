@@ -47,6 +47,7 @@ namespace GesFut.Telas.FormConsultaAtleta
             this.dbgAtleta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dbgAtleta.Size = new System.Drawing.Size(775, 235);
             this.dbgAtleta.TabIndex = 0;
+            this.dbgAtleta.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgAtleta_RowEnter);
             // 
             // btnCadastrarAtleta
             // 
