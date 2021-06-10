@@ -285,6 +285,9 @@ namespace GesFut
             this.Controls.Add(this.txtPercentualGordura);
             this.Controls.Add(this.txtTempoJogo);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormAvaliacaoMedica";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

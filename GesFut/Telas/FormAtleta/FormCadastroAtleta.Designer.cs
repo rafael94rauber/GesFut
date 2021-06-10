@@ -192,6 +192,9 @@ namespace GesFut
             this.Controls.Add(this.label1);
             this.Controls.Add(this.edtNome);
             this.Controls.Add(this.salvarAtleta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCadastroAtleta";
             this.Text = "Cadastro de Atleta";
             this.Load += new System.EventHandler(this.FormCadastroAtleta_Load);

@@ -75,15 +75,23 @@ namespace GesFut
                     conexao.AtualizarDados(atleta);
                 };
 
-
-                
-
-                //LoadData();
                 MessageBox.Show("Informações Salvas!");
+                LimpaTela();
             }
         }
 
-    private void btnToAvaliacaoMedica_Click(object sender, EventArgs e)
+        private void LimpaTela()
+        {
+            edtNome.Text = "";
+            edtEmail.Text = "";
+            edtTelefone.Text = "";
+            edtEndereco.Text = "";
+            edtNascimento.Text = "";
+            edtSexo.Text = "";
+            edtCPF.Text = "";
+        }
+
+        private void btnToAvaliacaoMedica_Click(object sender, EventArgs e)
         {
             FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica(this.atleta.CodigoAtleta);
             formAvaliacaoMedica.ShowDialog();

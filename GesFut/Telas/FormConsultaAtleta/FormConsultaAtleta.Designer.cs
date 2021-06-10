@@ -73,11 +73,13 @@ namespace GesFut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 294);
+            this.ClientSize = new System.Drawing.Size(800, 285);
             this.Controls.Add(this.btnAvaliacoesMedicas);
             this.Controls.Add(this.btnCadastrarAtleta);
             this.Controls.Add(this.dbgAtleta);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormConsultaAtleta";
             this.Text = "FormConsultaAtleta";
             ((System.ComponentModel.ISupportInitialize)(this.dbgAtleta)).EndInit();
