@@ -71,7 +71,7 @@ namespace GesFut
             this.txtTempoJogo.Location = new System.Drawing.Point(149, 17);
             this.txtTempoJogo.Name = "txtTempoJogo";
             this.txtTempoJogo.Size = new System.Drawing.Size(100, 23);
-            this.txtTempoJogo.TabIndex = 2;
+            this.txtTempoJogo.TabIndex = 1;
             // 
             // txtPercentualGordura
             // 
@@ -85,7 +85,7 @@ namespace GesFut
             this.txtVelocidadeMedia.Location = new System.Drawing.Point(149, 75);
             this.txtVelocidadeMedia.Name = "txtVelocidadeMedia";
             this.txtVelocidadeMedia.Size = new System.Drawing.Size(100, 23);
-            this.txtVelocidadeMedia.TabIndex = 4;
+            this.txtVelocidadeMedia.TabIndex = 5;
             // 
             // label2
             // 
@@ -119,21 +119,21 @@ namespace GesFut
             this.txtTemperaturaCorporal.Location = new System.Drawing.Point(439, 16);
             this.txtTemperaturaCorporal.Name = "txtTemperaturaCorporal";
             this.txtTemperaturaCorporal.Size = new System.Drawing.Size(100, 23);
-            this.txtTemperaturaCorporal.TabIndex = 8;
+            this.txtTemperaturaCorporal.TabIndex = 2;
             // 
             // txtPressao
             // 
             this.txtPressao.Location = new System.Drawing.Point(438, 45);
             this.txtPressao.Name = "txtPressao";
             this.txtPressao.Size = new System.Drawing.Size(100, 23);
-            this.txtPressao.TabIndex = 9;
+            this.txtPressao.TabIndex = 4;
             // 
             // txtBatimentosCardiacos
             // 
             this.txtBatimentosCardiacos.Location = new System.Drawing.Point(439, 74);
             this.txtBatimentosCardiacos.Name = "txtBatimentosCardiacos";
             this.txtBatimentosCardiacos.Size = new System.Drawing.Size(100, 23);
-            this.txtBatimentosCardiacos.TabIndex = 10;
+            this.txtBatimentosCardiacos.TabIndex = 6;
             // 
             // label5
             // 
@@ -167,7 +167,7 @@ namespace GesFut
             this.txtAlergias.Location = new System.Drawing.Point(439, 103);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(100, 23);
-            this.txtAlergias.TabIndex = 14;
+            this.txtAlergias.TabIndex = 8;
             // 
             // label8
             // 
@@ -185,7 +185,7 @@ namespace GesFut
             this.chkLesao.Name = "chkLesao";
             this.chkLesao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkLesao.Size = new System.Drawing.Size(15, 14);
-            this.chkLesao.TabIndex = 22;
+            this.chkLesao.TabIndex = 9;
             this.chkLesao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkLesao.UseVisualStyleBackColor = true;
             this.chkLesao.CheckedChanged += new System.EventHandler(this.chkLesao_CheckedChanged);
@@ -204,7 +204,7 @@ namespace GesFut
             this.txtPeso.Location = new System.Drawing.Point(149, 104);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(100, 23);
-            this.txtPeso.TabIndex = 23;
+            this.txtPeso.TabIndex = 7;
             // 
             // label1
             // 
@@ -238,7 +238,7 @@ namespace GesFut
             this.txtFadiga.Location = new System.Drawing.Point(149, 159);
             this.txtFadiga.Name = "txtFadiga";
             this.txtFadiga.Size = new System.Drawing.Size(100, 23);
-            this.txtFadiga.TabIndex = 28;
+            this.txtFadiga.TabIndex = 10;
             // 
             // Fitness
             // 
@@ -254,7 +254,7 @@ namespace GesFut
             this.txtFitness.Location = new System.Drawing.Point(439, 159);
             this.txtFitness.Name = "txtFitness";
             this.txtFitness.Size = new System.Drawing.Size(100, 23);
-            this.txtFitness.TabIndex = 30;
+            this.txtFitness.TabIndex = 11;
             // 
             // FormAvaliacaoMedica
             // 

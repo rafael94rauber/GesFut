@@ -29,19 +29,19 @@ namespace GesFut
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dbgAvaliacaoMedica = new System.Windows.Forms.DataGridView();
             this.btnCadastrarAvaliacao = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacaoMedica)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dbgAvaliacaoMedica
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 279);
-            this.dataGridView1.TabIndex = 0;
+            this.dbgAvaliacaoMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbgAvaliacaoMedica.Location = new System.Drawing.Point(12, 12);
+            this.dbgAvaliacaoMedica.Name = "dbgAvaliacaoMedica";
+            this.dbgAvaliacaoMedica.RowTemplate.Height = 25;
+            this.dbgAvaliacaoMedica.Size = new System.Drawing.Size(776, 279);
+            this.dbgAvaliacaoMedica.TabIndex = 0;
             // 
             // btnCadastrarAvaliacao
             // 
@@ -59,17 +59,17 @@ namespace GesFut
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCadastrarAvaliacao);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dbgAvaliacaoMedica);
             this.Name = "FormConsultaAvaliacaoMedica";
             this.Text = "FormConsultaAvaliacaoMedica";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgAvaliacaoMedica)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dbgAvaliacaoMedica;
         private System.Windows.Forms.Button btnCadastrarAvaliacao;
     }
 }

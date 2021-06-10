@@ -18,6 +18,7 @@ namespace GesFut
         {
             ConexaoDB conexao = new ConexaoDB();
             DataSet dataset = conexao.RetornarDados(AvaliacaoMedica.GetSQLConsulta(this.CodigoAtleta));
+            dbgAvaliacaoMedica.DataSource = dataset.Tables[0];
         }
 
 

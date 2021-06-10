@@ -29,14 +29,27 @@ namespace GesFut
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-            FormAvaliacaoMedica formConsultaAvaliacaoMedica = new FormAvaliacaoMedica(CodigoAtleta);
+            if (CodigoAtleta <= 0)
+            {
+                MessageBox.Show("Selecione um atleta");
+                return;
+            } 
+            
+            FormConsultaAvaliacaoMedica formConsultaAvaliacaoMedica = new FormConsultaAvaliacaoMedica(CodigoAtleta);
             formConsultaAvaliacaoMedica.ShowDialog();
         }
 
         private void dbgAtleta_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            CodigoAtleta = Convert.ToInt32(dbgAtleta.Rows[e.RowIndex].Cells[1].Value.ToString());
+            try
+            {
+                CodigoAtleta = Convert.ToInt32(dbgAtleta.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+            catch
+            {
+                CodigoAtleta = 0;
+            }
+
         }
     }
 }
