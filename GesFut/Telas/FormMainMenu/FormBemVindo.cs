@@ -25,5 +25,11 @@ namespace GesFut
         {
             Application.Exit();
         }
+
+        private void btnConsultaJogos_Click(object sender, EventArgs e)
+        {
+            ConsultaJogos formConsultaJogos = new ConsultaJogos();
+            formConsultaJogos.Show();
+        }
     }
 }

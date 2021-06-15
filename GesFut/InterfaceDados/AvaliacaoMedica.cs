@@ -12,20 +12,20 @@ namespace GesFut
         public int Fadiga { get; set; }
         public int Fitness { get; set; }
 
-        public static String GetSQLConsulta(int CodigoAtleta)
+        public static string GetSQLConsulta(int CodigoAtleta)
         {
             return $"Select * from AVALIACAO_MEDICA where codigo_atleta = {CodigoAtleta} order by data_avaliacao desc";
         }
-        public String GetDelete()
+        public string GetDelete()
         {
             return $"DELETE FROM AVALIACAO_MEDICA WHERE codigo_avaliacao = {CodigoAvaliacao}";
         }
-        public String GetInsert()
+        public string GetInsert()
         {
             return $"INSERT INTO AVALIACAO_MEDICA (codigo_atleta, data_avaliacao, usuario_responsavel, peso, temperatura_corporal, pressao, batimentos_cardiacos, alergias, lesao) " +
                    $"values ({CodigoAtleta}, '{DataAvaliacao.ToString("yyyy-MM-dd")}', {UsuarioResponsavel}, {Peso}, {TemperaturaCorporal}, '{Pressao}', {BatimentosCardiacos}, '{Alergias}', '{Lesao.ToString()}') ";
         }
-        public String GetUpdate()
+        public string GetUpdate()
         {
             return "";/*return $"UPDATE AVALIACAO_DESEMPENHO set " +
                    $"  codigo_atleta = {CodigoAtleta}" +
@@ -37,9 +37,19 @@ namespace GesFut
                    $" ,velocidade_media = {VelocidadeMedia}" +
                    $"WHERE codigo_avaliacao = {CodigoAvaliacao}";*/
         }
-        public String GetCampoCodigo()
+        public string GetCampoCodigo()
         {
             return "codigo_avaliacao";
+        }
+
+        public string GetUpdate(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetDelete(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

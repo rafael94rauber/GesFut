@@ -99,7 +99,7 @@ namespace GesFut
         private bool validaTela()
         {
             
-            String mensagem = "";
+            string mensagem = "";
             if (edtNome.Text.Trim() == "")
             {
                 mensagem += "  Nome\n";

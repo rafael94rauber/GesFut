@@ -4,9 +4,11 @@ namespace GesFut
 {
     public interface IBaseSQL
     {
-        public String GetInsert();
-        public String GetUpdate();
-        public String GetDelete();
-        public String GetCampoCodigo();
+        public string GetInsert();
+        public string GetUpdate();
+        public string GetDelete();
+        public string GetCampoCodigo();
+        public string GetUpdate(int id);
+        public string GetDelete(int id);
     }
 }

@@ -6,8 +6,8 @@ namespace GesFut
     public class Atleta
     {
         public int CodigoAtleta { get; }
-        public String Nome { get; set; }
-        public String CPF { get; set; }
+        public string Nome { get; set; }
+        public string CPF { get; set; }
         public DateTime DataNascimento { get; set; }
         public double Altura { get; set; }
 

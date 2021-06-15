@@ -8,12 +8,12 @@ namespace GesFut
         public double PercentualGordura { get; set; }
         public double VelocidadeMedia { get; set; }
 
-        public String GetInsert()
+        public string GetInsert()
         {
             return $"INSERT INTO AVALIACAO_DESEMPENHO (codigo_atleta, data_avaliacao, usuario_responsavel, peso, tempo_jogo, percentual_gordura, velocidade_media) " +
                    $"values ({CodigoAtleta}, {DataAvaliacao.ToString("yyyy-MM-dd")}, {UsuarioResponsavel}, {Peso}, {TempoJogo.ToString("mm:HH:ss")}, {PercentualGordura}, {VelocidadeMedia}) ";
         }
-        public String GetUpdate()
+        public string GetUpdate()
         {
             return $"UPDATE AVALIACAO_DESEMPENHO set " +
                    $"  codigo_atleta = {CodigoAtleta}" +
@@ -25,14 +25,24 @@ namespace GesFut
                    $" ,velocidade_media = {VelocidadeMedia}" +
                    $"WHERE codigo_avaliacao = {CodigoAvaliacao}";
         }
-        public String GetDelete()
+        public string GetDelete()
         {
             return $"DELETE FROM AVALIACAO_DESEMPENHO WHERE codigo_avaliacao = {CodigoAvaliacao}";
         }
 
-        public String GetCampoCodigo()
+        public string GetCampoCodigo()
         {
             return "codigo_avaliacao";
+        }
+
+        public string GetUpdate(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetDelete(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

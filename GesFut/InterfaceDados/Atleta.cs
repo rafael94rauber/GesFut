@@ -6,14 +6,14 @@ namespace GesFut
     public class Atleta: IBaseSQL
     {
         public int CodigoAtleta { get; }
-        public String Nome { get; set; }
-        public String CPF { get; set; }
+        public string Nome { get; set; }
+        public string CPF { get; set; }
         public DateTime DataNascimento { get; set; }
 
-        public String Sexo { get; set; }
-        public String Email { get; set; }
-        public String Telefone { get; set; }
-        public String Endereco { get; set; }
+        public string Sexo { get; set; }
+        public string Email { get; set; }
+        public string Telefone { get; set; }
+        public string Endereco { get; set; }
 
         private List<AvaliacaoDesempenho> avaliacoesDesempenho;
 
@@ -36,14 +36,14 @@ namespace GesFut
             avaliacoesMedicas.Add(avaliacaoMedica);
         }
 
-        public String GetInsert()
+        public string GetInsert()
         {
             return $"insert into atleta (nome, cpf, data_nascimento) values ('{Nome}'," +
                    $"'{CPF}', '{DataNascimento.ToString("yyyy-MM-dd")}');";
 
         }
 
-        public String GetUpdate()
+        public string GetUpdate()
         {
             return $"update atleta set" +
                    $"  nome = {Nome},  " +
@@ -53,21 +53,30 @@ namespace GesFut
 
         }
 
-        public String GetDelete()
+        public string GetDelete()
         {
             return $"DELETE FROM atleta WHERE codigo_atleta = {CodigoAtleta}";
 
         }
 
-        public String GetCampoCodigo()
+        public string GetCampoCodigo()
         {
             return "codigo_atleta";
         }
 
-        public static String GetSQLConsulta()
+        public static string GetSQLConsulta()
         {
             return "SELECT * FROM atleta order by nome";
         }
 
+        public string GetUpdate(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetDelete(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
