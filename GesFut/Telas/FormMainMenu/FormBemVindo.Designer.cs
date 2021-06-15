@@ -85,6 +85,9 @@ namespace GesFut
             this.Controls.Add(this.btnAtleta);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormBemVindo";
             this.Text = "GesFut";
             this.Load += new System.EventHandler(this.Form1_Load);

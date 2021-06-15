@@ -36,7 +36,7 @@ namespace GesFut
 
         public static string GetSQLConsulta()
         {
-            return "SELECT * FROM jogo";
+            return "SELECT * FROM jogo order by data_hora desc";
         }
 
         public string GetUpdate()

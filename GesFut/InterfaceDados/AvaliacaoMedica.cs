@@ -22,8 +22,12 @@ namespace GesFut
         }
         public string GetInsert()
         {
+            String lesao = "N";
+            if (this.Lesao)
+                lesao = "S";
+
             return $"INSERT INTO AVALIACAO_MEDICA (codigo_atleta, data_avaliacao, usuario_responsavel, peso, temperatura_corporal, pressao, batimentos_cardiacos, alergias, lesao) " +
-                   $"values ({CodigoAtleta}, '{DataAvaliacao.ToString("yyyy-MM-dd")}', {UsuarioResponsavel}, {Peso}, {TemperaturaCorporal}, '{Pressao}', {BatimentosCardiacos}, '{Alergias}', '{Lesao.ToString()}') ";
+                   $"values ({CodigoAtleta}, '{DataAvaliacao.ToString("yyyy-MM-dd")}', {UsuarioResponsavel}, {Peso}, {TemperaturaCorporal}, '{Pressao}', {BatimentosCardiacos}, '{Alergias}', '{lesao}') ";
         }
         public string GetUpdate()
         {

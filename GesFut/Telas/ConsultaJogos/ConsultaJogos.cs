@@ -25,5 +25,10 @@ namespace GesFut
             DataSet dataset = conexao.RetornarDados(Jogos.GetSQLConsulta());
             gdvConsultaJogos.DataSource = dataset.Tables[0];
         }
+
+        private void gdvConsultaJogos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
