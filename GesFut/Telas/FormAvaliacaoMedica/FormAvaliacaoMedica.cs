@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Windows.Forms;
 
 namespace GesFut
@@ -14,36 +15,41 @@ namespace GesFut
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (validaTela())
+            var resultado = ValidaTela();
+            if (!(resultado is null))
             {
-
-                //Calculo de Aptidao
-                int aptidao = (Convert.ToInt32(txtFadiga.Text) + Convert.ToInt32(txtFitness.Text)) / 2;
-
-                MessageBox.Show("Atleta com " + aptidao + "% de aptidão para o próximo jogo");
-
-
-                var avaliacao = new AvaliacaoMedica
-                {
-                    CodigoAtleta = this.CodigoAtleta,
-                    DataAvaliacao = DateTime.Now,
-                    UsuarioResponsavel = 1, // admin
-                    Peso = Convert.ToDouble(txtPeso.Text),
-                    TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text),
-                    Pressao = txtPressao.Text,
-                    BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text),
-                    Alergias = txtAlergias.Text,
-                    Lesao = chkLesao.Checked,
-                    Fadiga = Convert.ToInt32(txtFadiga.Text),
-                    Fitness = Convert.ToInt32(txtFitness.Text)
-                };
-
-                ConexaoDB conexao = new ConexaoDB();
-                conexao.InsertDados(avaliacao);
-
-                LimpaTela();
-                MessageBox.Show("Informações Salvas!");
+                MessageBox.Show(resultado);
+                return;
             }
+
+            //Calculo de Aptidao
+            int aptidao = (Convert.ToInt32(txtFadiga.Text) + Convert.ToInt32(txtFitness.Text)) / 2;
+
+            MessageBox.Show("Atleta com " + aptidao + "% de aptidão para o próximo jogo");
+
+
+            var avaliacao = new AvaliacaoMedica
+            {
+                CodigoAtleta = this.CodigoAtleta,
+                DataAvaliacao = DateTime.Now,
+                UsuarioResponsavel = 1, // admin
+                Peso = Convert.ToDouble(txtPeso.Text),
+                TemperaturaCorporal = Convert.ToDouble(txtTemperaturaCorporal.Text),
+                Pressao = txtPressao.Text,
+                BatimentosCardiacos = Convert.ToInt32(txtBatimentosCardiacos.Text),
+                Alergias = txtAlergias.Text,
+                Lesao = chkLesao.Checked,
+                Fadiga = Convert.ToInt32(txtFadiga.Text),
+                Fitness = Convert.ToInt32(txtFitness.Text)
+            };
+
+            ConexaoDB conexao = new ConexaoDB();
+            conexao.InsertDados(avaliacao);
+
+            LimpaTela();
+            MessageBox.Show("Informações Salvas!");
+            this.Close();
+
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -66,13 +72,17 @@ namespace GesFut
 
         public void LimpaTela()
         {
-         
-            txtPeso.Text = "";
+            txtTempoJogo.Text = "";
             txtTemperaturaCorporal.Text = "";
+            txtPercentualGordura.Text = "";
             txtPressao.Text = "";
+            txtVelocidadeMedia.Text = "";
             txtBatimentosCardiacos.Text = "";
+            txtPeso.Text = "";
             txtAlergias.Text = "";
             chkLesao.Checked = false;
+            txtFadiga.Text = "";
+            txtFitness.Text = "";
         }
 
         private void chkLesao_CheckedChanged(object sender, EventArgs e)
@@ -85,14 +95,19 @@ namespace GesFut
 
         }
 
-        private bool validaTela()
+        private string ValidaTela()
         {
-            string mensagem = "";
+            StringBuilder mensagem = new StringBuilder();
+            mensagem.Clear();
+
             try
-            { 
+            {
                 Convert.ToDouble(txtPeso.Text);
-            } catch {
-                mensagem += "  Peso\n";
+            }
+            catch
+            {
+                mensagem.AppendLine("Peso");
+                txtPeso.Focus();
             }
             try
             {
@@ -100,7 +115,8 @@ namespace GesFut
             }
             catch
             {
-                mensagem += "  Temperatura Corporal\n";
+                mensagem.AppendLine("Temperatura Corporal");
+                txtTemperaturaCorporal.Focus();
             }
 
             try
@@ -109,7 +125,8 @@ namespace GesFut
             }
             catch
             {
-                mensagem += "  Batimentos Cardíacoszn";
+                mensagem.AppendLine("Batimentos Cardíacoszn");
+                txtBatimentosCardiacos.Focus();
             }
 
             try
@@ -118,7 +135,8 @@ namespace GesFut
             }
             catch
             {
-                mensagem += "  Fadiga\n";
+                mensagem.AppendLine("Fadiga");
+                txtFadiga.Focus();
             }
 
             try
@@ -127,20 +145,16 @@ namespace GesFut
             }
             catch
             {
-                mensagem += "  Fitness";
+                mensagem.AppendLine("Fitness");
+                txtFitness.Focus();
             }
 
-            if (mensagem == "")
+            if (string.IsNullOrEmpty(mensagem.ToString()))
             {
-                return true;
-            }
-            else
-            {
-                mensagem = "Obrigatório informar os campos: \n" + mensagem;
-                MessageBox.Show(mensagem);
-                return false;
+                return null;
             }
 
-        } 
+            return $"Obrigatório informar os campos: \n{mensagem}";
+        }
     }
 }

@@ -60,7 +60,7 @@ namespace GesFut
             this.button1.Location = new System.Drawing.Point(464, 231);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Salvar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -78,14 +78,14 @@ namespace GesFut
             this.txtPercentualGordura.Location = new System.Drawing.Point(149, 46);
             this.txtPercentualGordura.Name = "txtPercentualGordura";
             this.txtPercentualGordura.Size = new System.Drawing.Size(100, 23);
-            this.txtPercentualGordura.TabIndex = 3;
+            this.txtPercentualGordura.TabIndex = 2;
             // 
             // txtVelocidadeMedia
             // 
             this.txtVelocidadeMedia.Location = new System.Drawing.Point(149, 75);
             this.txtVelocidadeMedia.Name = "txtVelocidadeMedia";
             this.txtVelocidadeMedia.Size = new System.Drawing.Size(100, 23);
-            this.txtVelocidadeMedia.TabIndex = 5;
+            this.txtVelocidadeMedia.TabIndex = 3;
             // 
             // label2
             // 
@@ -119,21 +119,21 @@ namespace GesFut
             this.txtTemperaturaCorporal.Location = new System.Drawing.Point(439, 16);
             this.txtTemperaturaCorporal.Name = "txtTemperaturaCorporal";
             this.txtTemperaturaCorporal.Size = new System.Drawing.Size(100, 23);
-            this.txtTemperaturaCorporal.TabIndex = 2;
+            this.txtTemperaturaCorporal.TabIndex = 7;
             // 
             // txtPressao
             // 
             this.txtPressao.Location = new System.Drawing.Point(438, 45);
             this.txtPressao.Name = "txtPressao";
             this.txtPressao.Size = new System.Drawing.Size(100, 23);
-            this.txtPressao.TabIndex = 4;
+            this.txtPressao.TabIndex = 8;
             // 
             // txtBatimentosCardiacos
             // 
             this.txtBatimentosCardiacos.Location = new System.Drawing.Point(439, 74);
             this.txtBatimentosCardiacos.Name = "txtBatimentosCardiacos";
             this.txtBatimentosCardiacos.Size = new System.Drawing.Size(100, 23);
-            this.txtBatimentosCardiacos.TabIndex = 6;
+            this.txtBatimentosCardiacos.TabIndex = 9;
             // 
             // label5
             // 
@@ -167,7 +167,7 @@ namespace GesFut
             this.txtAlergias.Location = new System.Drawing.Point(439, 103);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(100, 23);
-            this.txtAlergias.TabIndex = 8;
+            this.txtAlergias.TabIndex = 10;
             // 
             // label8
             // 
@@ -185,7 +185,7 @@ namespace GesFut
             this.chkLesao.Name = "chkLesao";
             this.chkLesao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkLesao.Size = new System.Drawing.Size(15, 14);
-            this.chkLesao.TabIndex = 9;
+            this.chkLesao.TabIndex = 5;
             this.chkLesao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkLesao.UseVisualStyleBackColor = true;
             this.chkLesao.CheckedChanged += new System.EventHandler(this.chkLesao_CheckedChanged);
@@ -204,7 +204,7 @@ namespace GesFut
             this.txtPeso.Location = new System.Drawing.Point(149, 104);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(100, 23);
-            this.txtPeso.TabIndex = 7;
+            this.txtPeso.TabIndex = 4;
             // 
             // label1
             // 
@@ -238,7 +238,7 @@ namespace GesFut
             this.txtFadiga.Location = new System.Drawing.Point(149, 159);
             this.txtFadiga.Name = "txtFadiga";
             this.txtFadiga.Size = new System.Drawing.Size(100, 23);
-            this.txtFadiga.TabIndex = 10;
+            this.txtFadiga.TabIndex = 6;
             // 
             // Fitness
             // 
