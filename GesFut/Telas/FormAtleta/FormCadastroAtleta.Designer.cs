@@ -51,7 +51,7 @@ namespace GesFut
             this.salvarAtleta.Location = new System.Drawing.Point(490, 218);
             this.salvarAtleta.Name = "salvarAtleta";
             this.salvarAtleta.Size = new System.Drawing.Size(75, 22);
-            this.salvarAtleta.TabIndex = 0;
+            this.salvarAtleta.TabIndex = 8;
             this.salvarAtleta.Text = "Salvar";
             this.salvarAtleta.UseVisualStyleBackColor = true;
             this.salvarAtleta.Click += new System.EventHandler(this.salvarAtleta_Click);
@@ -134,7 +134,7 @@ namespace GesFut
             this.edtNascimento.Location = new System.Drawing.Point(465, 40);
             this.edtNascimento.Name = "edtNascimento";
             this.edtNascimento.Size = new System.Drawing.Size(100, 23);
-            this.edtNascimento.TabIndex = 2;
+            this.edtNascimento.TabIndex = 5;
             this.edtNascimento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // edtEndereco
@@ -142,35 +142,35 @@ namespace GesFut
             this.edtEndereco.Location = new System.Drawing.Point(133, 167);
             this.edtEndereco.Name = "edtEndereco";
             this.edtEndereco.Size = new System.Drawing.Size(432, 23);
-            this.edtEndereco.TabIndex = 7;
+            this.edtEndereco.TabIndex = 4;
             // 
             // edtEmail
             // 
             this.edtEmail.Location = new System.Drawing.Point(133, 81);
             this.edtEmail.Name = "edtEmail";
             this.edtEmail.Size = new System.Drawing.Size(100, 23);
-            this.edtEmail.TabIndex = 3;
+            this.edtEmail.TabIndex = 2;
             // 
             // edtSexo
             // 
             this.edtSexo.Location = new System.Drawing.Point(465, 81);
             this.edtSexo.Name = "edtSexo";
             this.edtSexo.Size = new System.Drawing.Size(100, 23);
-            this.edtSexo.TabIndex = 4;
+            this.edtSexo.TabIndex = 6;
             // 
             // edtTelefone
             // 
             this.edtTelefone.Location = new System.Drawing.Point(133, 124);
             this.edtTelefone.Name = "edtTelefone";
             this.edtTelefone.Size = new System.Drawing.Size(100, 23);
-            this.edtTelefone.TabIndex = 5;
+            this.edtTelefone.TabIndex = 3;
             // 
             // edtCPF
             // 
             this.edtCPF.Location = new System.Drawing.Point(465, 125);
             this.edtCPF.Name = "edtCPF";
             this.edtCPF.Size = new System.Drawing.Size(100, 23);
-            this.edtCPF.TabIndex = 6;
+            this.edtCPF.TabIndex = 7;
             // 
             // FormCadastroAtleta
             // 

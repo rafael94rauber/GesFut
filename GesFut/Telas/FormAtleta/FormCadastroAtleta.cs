@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Windows.Forms;
 
 namespace GesFut
@@ -42,42 +43,56 @@ namespace GesFut
 
         }
 
+        private void ClearCampos()
+        {
+            edtCPF.Clear();
+            edtEmail.Clear();
+            edtEndereco.Clear();
+            edtNascimento.Clear();
+            edtNome.Clear();
+            edtSexo.Clear();
+            edtTelefone.Clear();
+        }
+
         private void salvarAtleta_Click(object sender, EventArgs e)
         {
-            if (validaTela())
+            var resultado = validaTela();
+            if (!(resultado is null))
             {
-                if (this.atleta == null)
-                {
-                    this.atleta = new Atleta(0)
-                    {
-                        //   CodigoAtleta = Cod
-                        Nome = edtNome.Text,
-                        Email = edtEmail.Text,
-                        Telefone = edtTelefone.Text,
-                        Endereco = edtEndereco.Text,
-                        DataNascimento = Convert.ToDateTime(edtNascimento.Text),
-                        Sexo = edtSexo.Text,
-                        CPF = edtCPF.Text
-                    };
-                    ConexaoDB conexao = new ConexaoDB();
-                    conexao.InsertDados(atleta);
-                }
-                else
-                {
-                    this.atleta.Nome = edtNome.Text;
-                    this.atleta.Email = edtEmail.Text;
-                    this.atleta.Telefone = edtTelefone.Text;
-                    this.atleta.Endereco = edtEndereco.Text;
-                    this.atleta.DataNascimento = Convert.ToDateTime(edtNascimento.Text);
-                    this.atleta.Sexo = edtSexo.Text;
-                    this.atleta.CPF = edtCPF.Text;
-                    ConexaoDB conexao = new ConexaoDB();
-                    conexao.AtualizarDados(atleta);
-                };
-
-                MessageBox.Show("Informações Salvas!");
-                LimpaTela();
+                MessageBox.Show(resultado);
+                return;
             }
+            if (this.atleta == null)
+            {
+                this.atleta = new Atleta(0)
+                {
+                    //   CodigoAtleta = Cod
+                    Nome = edtNome.Text,
+                    Email = edtEmail.Text,
+                    Telefone = edtTelefone.Text,
+                    Endereco = edtEndereco.Text,
+                    DataNascimento = Convert.ToDateTime(edtNascimento.Text),
+                    Sexo = edtSexo.Text,
+                    CPF = edtCPF.Text
+                };
+                ConexaoDB conexao = new ConexaoDB();
+                conexao.InsertDados(atleta);
+            }
+            else
+            {
+                this.atleta.Nome = edtNome.Text;
+                this.atleta.Email = edtEmail.Text;
+                this.atleta.Telefone = edtTelefone.Text;
+                this.atleta.Endereco = edtEndereco.Text;
+                this.atleta.DataNascimento = Convert.ToDateTime(edtNascimento.Text);
+                this.atleta.Sexo = edtSexo.Text;
+                this.atleta.CPF = edtCPF.Text;
+                ConexaoDB conexao = new ConexaoDB();
+                conexao.AtualizarDados(atleta);
+            };
+            LimpaTela();
+            MessageBox.Show("Informações Salvas!");
+            this.Close();
         }
 
         private void LimpaTela()
@@ -89,6 +104,7 @@ namespace GesFut
             edtNascimento.Text = "";
             edtSexo.Text = "";
             edtCPF.Text = "";
+            ClearCampos();
         }
 
         private void btnToAvaliacaoMedica_Click(object sender, EventArgs e)
@@ -96,18 +112,19 @@ namespace GesFut
             FormAvaliacaoMedica formAvaliacaoMedica = new FormAvaliacaoMedica(this.atleta.CodigoAtleta);
             formAvaliacaoMedica.ShowDialog();
         }
-        private bool validaTela()
+        private string validaTela()
         {
-            
-            string mensagem = "";
-            if (edtNome.Text.Trim() == "")
+            StringBuilder mensagem = new StringBuilder();
+            mensagem.Clear();
+
+            if (string.IsNullOrWhiteSpace(edtNome.Text))
             {
-                mensagem += "  Nome\n";
+                mensagem.AppendLine("Nome");
             }
-            
-            if(edtCPF.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(edtCPF.Text))
             {
-                mensagem += "  CPF";
+                mensagem.AppendLine("CPF");
             }
 
             try
@@ -116,30 +133,20 @@ namespace GesFut
             }
             catch
             {
-                mensagem += "  Data de Nascimento\n";
+                mensagem.AppendLine("Data de Nascimento");
             }
 
-            if (mensagem != "")
+            if (edtCPF.Text.Length != 11)
             {
-                mensagem = "Obrigatório informar os campos: \n" + mensagem;
+                mensagem.AppendLine("CPF invalido");
             }
 
-            if (edtCPF.Text.Length != 11 )
+            if (string.IsNullOrEmpty(mensagem.ToString()))
             {
-                mensagem += "\nCPF invalido";
+                return null;
             }
 
-            if (mensagem != "")
-            { 
-                MessageBox.Show(mensagem);
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return $"Obrigatório informar os campos: \n{mensagem}";
         }
     }
-
-    
 }
