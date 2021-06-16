@@ -33,8 +33,8 @@ namespace GesFut
             {
                 MessageBox.Show("Selecione um atleta");
                 return;
-            } 
-            
+            }
+
             FormConsultaAvaliacaoMedica formConsultaAvaliacaoMedica = new FormConsultaAvaliacaoMedica(CodigoAtleta);
             formConsultaAvaliacaoMedica.ShowDialog();
         }
@@ -43,7 +43,15 @@ namespace GesFut
         {
             try
             {
-                CodigoAtleta = Convert.ToInt32(dbgAtleta.Rows[e.RowIndex].Cells[0].Value.ToString());
+                var codigoAlteta = dbgAtleta.Rows[e.RowIndex].Cells[0].Value.ToString();
+                if (codigoAlteta is null)
+                {
+                    CodigoAtleta = 0;
+                }
+                else
+                {
+                    CodigoAtleta = Convert.ToInt32(codigoAlteta);
+                }
             }
             catch
             {

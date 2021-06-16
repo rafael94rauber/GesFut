@@ -14,6 +14,7 @@ namespace GesFut
         public string Email { get; set; }
         public string Telefone { get; set; }
         public string Endereco { get; set; }
+        public string Altura { get; set; }
 
         private List<AvaliacaoDesempenho> avaliacoesDesempenho;
 
@@ -38,8 +39,8 @@ namespace GesFut
 
         public string GetInsert()
         {
-            return $"insert into atleta (nome, cpf, data_nascimento) values ('{Nome}'," +
-                   $"'{CPF}', '{DataNascimento.ToString("yyyy-MM-dd")}');";
+            return $"insert into atleta (nome, cpf, data_nascimento, altura) values ('{Nome}'," +
+                   $"'{CPF}', '{DataNascimento.ToString("yyyy-MM-dd")}', {Altura});";
 
         }
 
@@ -49,6 +50,7 @@ namespace GesFut
                    $"  nome = {Nome},  " +
                    $"  cpf = {CPF}," +
                    $"  data_nascimento = {DataNascimento}," +
+                   $"  altura = {Altura}" +
                    $"where codigo_atleta = {CodigoAtleta};";
 
         }
