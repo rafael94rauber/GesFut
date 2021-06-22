@@ -11,8 +11,8 @@ namespace GesFut
         private static string Port = "5432";
         private static string DBname = "gesfut";
         private static string User = "postgres";
-        private static string Password = "rer251994";
-        //private static string Password = "123456";
+        //private static string Password = "rer251994";
+        private static string Password = "123456";
         private static string ConexaoDb = "";
 
 
@@ -84,6 +84,13 @@ namespace GesFut
                 ",constraint fk_avaliacao_medica_atleta foreign key(codigo_atleta) references atleta(codigo_atleta)" +
                 ",constraint fk_avaliacao_medica_usuario foreign key(usuario_responsavel) references usuario(codigo_usuario)" +
                 ");");
+            ExecutarComando("insert into jogo(time_rival, data_hora) values('Gremio', '01.01.2022')");
+
+            ExecutarComando("insert into jogo(time_rival, data_hora) values('Internacional', '20.07.2021')");
+
+            ExecutarComando("insert into jogo(time_rival, data_hora) values('Juventude', '03.06.2022')");
+
+            ExecutarComando("insert into jogo(time_rival, data_hora) values('Flamengo', '09.09.2022')");
         }
 
         private void ExecutarComando(string comandoSql)

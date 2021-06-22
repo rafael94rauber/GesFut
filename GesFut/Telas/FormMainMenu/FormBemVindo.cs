@@ -43,6 +43,7 @@ namespace GesFut
             {
                 ConexaoDB conexao = new ConexaoDB();
                 conexao.CriarBancoDadosZerado();
+                MessageBox.Show("Banco criado.");
             }            
         }
     }
