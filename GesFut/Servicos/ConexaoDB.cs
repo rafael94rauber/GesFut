@@ -91,6 +91,8 @@ namespace GesFut
             ExecutarComando("insert into jogo(time_rival, data_hora) values('Juventude', '03.06.2022')");
 
             ExecutarComando("insert into jogo(time_rival, data_hora) values('Flamengo', '09.09.2022')");
+
+            ExecutarComando("insert into usuario (nome, usuario, senha) values ('admin', 'admin', '123mudar');");
         }
 
         private void ExecutarComando(string comandoSql)
