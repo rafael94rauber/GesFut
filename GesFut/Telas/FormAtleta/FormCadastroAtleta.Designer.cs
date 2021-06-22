@@ -44,16 +44,14 @@ namespace GesFut
             this.edtSexo = new System.Windows.Forms.TextBox();
             this.edtTelefone = new System.Windows.Forms.TextBox();
             this.edtCPF = new System.Windows.Forms.TextBox();
-            this.txtAltura = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // salvarAtleta
             // 
-            this.salvarAtleta.Location = new System.Drawing.Point(490, 264);
+            this.salvarAtleta.Location = new System.Drawing.Point(490, 226);
             this.salvarAtleta.Name = "salvarAtleta";
             this.salvarAtleta.Size = new System.Drawing.Size(75, 22);
-            this.salvarAtleta.TabIndex = 9;
+            this.salvarAtleta.TabIndex = 8;
             this.salvarAtleta.Text = "Salvar";
             this.salvarAtleta.UseVisualStyleBackColor = true;
             this.salvarAtleta.Click += new System.EventHandler(this.salvarAtleta_Click);
@@ -70,16 +68,17 @@ namespace GesFut
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 128);
+            this.label4.Location = new System.Drawing.Point(327, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 15);
             this.label4.TabIndex = 5;
             this.label4.Text = "Telefone";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 216);
+            this.label5.Location = new System.Drawing.Point(23, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 15);
             this.label5.TabIndex = 6;
@@ -89,7 +88,7 @@ namespace GesFut
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 164);
+            this.label6.Location = new System.Drawing.Point(23, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 15);
             this.label6.TabIndex = 7;
@@ -136,67 +135,49 @@ namespace GesFut
             this.edtNascimento.Location = new System.Drawing.Point(465, 40);
             this.edtNascimento.Name = "edtNascimento";
             this.edtNascimento.Size = new System.Drawing.Size(100, 23);
-            this.edtNascimento.TabIndex = 6;
+            this.edtNascimento.TabIndex = 2;
             this.edtNascimento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // edtEndereco
             // 
-            this.edtEndereco.Location = new System.Drawing.Point(133, 213);
+            this.edtEndereco.Location = new System.Drawing.Point(133, 170);
             this.edtEndereco.Name = "edtEndereco";
             this.edtEndereco.Size = new System.Drawing.Size(432, 23);
-            this.edtEndereco.TabIndex = 5;
+            this.edtEndereco.TabIndex = 7;
             // 
             // edtEmail
             // 
             this.edtEmail.Location = new System.Drawing.Point(133, 81);
             this.edtEmail.Name = "edtEmail";
             this.edtEmail.Size = new System.Drawing.Size(100, 23);
-            this.edtEmail.TabIndex = 2;
+            this.edtEmail.TabIndex = 3;
             // 
             // edtSexo
             // 
             this.edtSexo.Location = new System.Drawing.Point(465, 81);
             this.edtSexo.Name = "edtSexo";
             this.edtSexo.Size = new System.Drawing.Size(100, 23);
-            this.edtSexo.TabIndex = 7;
+            this.edtSexo.TabIndex = 4;
             // 
             // edtTelefone
             // 
-            this.edtTelefone.Location = new System.Drawing.Point(133, 124);
+            this.edtTelefone.Location = new System.Drawing.Point(465, 123);
             this.edtTelefone.Name = "edtTelefone";
             this.edtTelefone.Size = new System.Drawing.Size(100, 23);
-            this.edtTelefone.TabIndex = 3;
+            this.edtTelefone.TabIndex = 6;
             // 
             // edtCPF
             // 
-            this.edtCPF.Location = new System.Drawing.Point(133, 164);
+            this.edtCPF.Location = new System.Drawing.Point(133, 126);
             this.edtCPF.Name = "edtCPF";
             this.edtCPF.Size = new System.Drawing.Size(100, 23);
-            this.edtCPF.TabIndex = 4;
-            // 
-            // txtAltura
-            // 
-            this.txtAltura.Location = new System.Drawing.Point(465, 128);
-            this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(100, 23);
-            this.txtAltura.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(327, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Altura";
+            this.edtCPF.TabIndex = 5;
             // 
             // FormCadastroAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 300);
-            this.Controls.Add(this.txtAltura);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(584, 267);
             this.Controls.Add(this.edtCPF);
             this.Controls.Add(this.edtTelefone);
             this.Controls.Add(this.edtEmail);
@@ -240,7 +221,5 @@ namespace GesFut
         private System.Windows.Forms.TextBox edtSexo;
         private System.Windows.Forms.TextBox edtTelefone;
         private System.Windows.Forms.TextBox edtCPF;
-        private System.Windows.Forms.TextBox txtAltura;
-        private System.Windows.Forms.Label label2;
     }
 }

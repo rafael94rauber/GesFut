@@ -47,3 +47,10 @@ create table jogo (codigo_jogo bigserial primary key, time_rival varchar(100), d
 
 alter table avaliacao_medica add column fadiga int,
 							add column fitness int;
+							
+alter table atleta drop column altura;
+
+alter table atleta add telefone text,
+                   add sexo text,
+                   add endereco text,
+                   add email text;

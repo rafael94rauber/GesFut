@@ -52,7 +52,6 @@ namespace GesFut
             edtNome.Clear();
             edtSexo.Clear();
             edtTelefone.Clear();
-            txtAltura.Clear();
         }
 
         private void salvarAtleta_Click(object sender, EventArgs e)
@@ -74,8 +73,7 @@ namespace GesFut
                     Endereco = edtEndereco.Text,
                     DataNascimento = Convert.ToDateTime(edtNascimento.Text),
                     Sexo = edtSexo.Text,
-                    CPF = edtCPF.Text,
-                    Altura = txtAltura.Text
+                    CPF = edtCPF.Text
                 };
                 ConexaoDB conexao = new ConexaoDB();
                 conexao.InsertDados(atleta);
@@ -89,7 +87,6 @@ namespace GesFut
                 this.atleta.DataNascimento = Convert.ToDateTime(edtNascimento.Text);
                 this.atleta.Sexo = edtSexo.Text;
                 this.atleta.CPF = edtCPF.Text;
-                this.atleta.Altura = txtAltura.Text;
                 ConexaoDB conexao = new ConexaoDB();
                 conexao.AtualizarDados(atleta);
             };
@@ -107,7 +104,6 @@ namespace GesFut
             edtNascimento.Text = "";
             edtSexo.Text = "";
             edtCPF.Text = "";
-            txtAltura.Text = "";
             ClearCampos();
         }
 
@@ -125,12 +121,6 @@ namespace GesFut
             {
                 mensagem.AppendLine("Nome");
                 edtNome.Focus();
-            }
-
-            if (string.IsNullOrWhiteSpace(txtAltura.Text))
-            {
-                mensagem.AppendLine("Altura");
-                txtAltura.Focus();
             }
 
             if (string.IsNullOrWhiteSpace(edtCPF.Text))
@@ -161,6 +151,11 @@ namespace GesFut
             }
 
             return $"Obrigatório informar os campos: \n{mensagem}";
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
