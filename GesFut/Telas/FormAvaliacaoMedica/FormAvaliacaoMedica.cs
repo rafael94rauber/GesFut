@@ -125,7 +125,7 @@ namespace GesFut
             }
             catch
             {
-                mensagem.AppendLine("Batimentos Cardíacoszn");
+                mensagem.AppendLine("Batimentos Cardíacos\n");
                 txtBatimentosCardiacos.Focus();
             }
 

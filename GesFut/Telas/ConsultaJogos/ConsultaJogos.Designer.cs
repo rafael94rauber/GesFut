@@ -36,8 +36,11 @@ namespace GesFut
             // gdvConsultaJogos
             // 
             this.gdvConsultaJogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdvConsultaJogos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gdvConsultaJogos.Location = new System.Drawing.Point(12, 12);
+            this.gdvConsultaJogos.MultiSelect = false;
             this.gdvConsultaJogos.Name = "gdvConsultaJogos";
+            this.gdvConsultaJogos.ReadOnly = true;
             this.gdvConsultaJogos.RowTemplate.Height = 25;
             this.gdvConsultaJogos.Size = new System.Drawing.Size(776, 279);
             this.gdvConsultaJogos.TabIndex = 1;

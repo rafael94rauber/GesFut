@@ -37,9 +37,13 @@ namespace GesFut
             // dbgAvaliacaoMedica
             // 
             this.dbgAvaliacaoMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbgAvaliacaoMedica.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dbgAvaliacaoMedica.Location = new System.Drawing.Point(12, 12);
+            this.dbgAvaliacaoMedica.MultiSelect = false;
             this.dbgAvaliacaoMedica.Name = "dbgAvaliacaoMedica";
+            this.dbgAvaliacaoMedica.ReadOnly = true;
             this.dbgAvaliacaoMedica.RowTemplate.Height = 25;
+            this.dbgAvaliacaoMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dbgAvaliacaoMedica.Size = new System.Drawing.Size(776, 279);
             this.dbgAvaliacaoMedica.TabIndex = 0;
             // 
