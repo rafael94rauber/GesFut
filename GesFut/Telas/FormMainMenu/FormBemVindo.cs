@@ -34,8 +34,16 @@ namespace GesFut
 
         private void BtnCriarBanco_Click(object sender, EventArgs e)
         {
-            ConexaoDB conexao = new ConexaoDB();
-            conexao.CriarBancoDadosZerado();
+            var resultado = MessageBox.Show("Você esta deletando e criando, uma novo banco de dados."
+                , "Você ter certeza"
+                , MessageBoxButtons.YesNo
+                , MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                ConexaoDB conexao = new ConexaoDB();
+                conexao.CriarBancoDadosZerado();
+            }            
         }
     }
 }

@@ -11,8 +11,8 @@ namespace GesFut
         private static string Port = "5432";
         private static string DBname = "gesfut";
         private static string User = "postgres";
-        //private static string Password = "rer251994";
-        private static string Password = "123456";
+        private static string Password = "rer251994";
+        //private static string Password = "123456";
         private static string ConexaoDb = "";
 
 
@@ -44,11 +44,46 @@ namespace GesFut
                 ", senha varchar(100)); ");
 
             ExecutarComando("create table atleta(" +
-                "codigo_atleta bigserial primary key" +
+                " codigo_atleta bigserial primary key" +
                 ", nome varchar(100)" +
                 ", cpf varchar(11)" +
                 ", data_nascimento date" +
-                ", altura double precision); ");
+                ", telefone text" +
+                ", sexo text" +
+                ", endereco text" +
+                ", email text" +
+                ");");
+
+            ExecutarComando("create table jogo (codigo_jogo bigserial primary key, time_rival varchar(100), data_hora timestamp);");
+
+            ExecutarComando("create table avaliacao_desempenho (codigo_avaliacao bigserial primary key," +
+                " codigo_atleta bigint" +
+                ",data_avaliacao date" +
+                ",usuario_responsavel bigint" +
+                ",peso double precision" +
+                ",tempo_jogo time" +
+                ",percentual_gordura double precision" +
+                ",velocidade_media double precision" +
+                ",constraint fk_avaliacao_desempenho_atleta foreign key(codigo_atleta) references atleta(codigo_atleta)" +
+                ",constraint fk_avaliacao_desempenho_usuario foreign key(usuario_responsavel) references usuario(codigo_usuario)" +
+                ");");
+
+            ExecutarComando("create table avaliacao_medica(" +
+                "codigo_avaliacao bigserial primary key" +
+                ",codigo_atleta bigint" +
+                ",data_avaliacao date" +
+                ",usuario_responsavel bigint" +
+                ",peso double precision" +
+                ",temperatura_corporal double precision" +
+                ",pressao varchar(30)" +
+                ",batimentos_cardiacos int" +
+                ",alergias text" +
+                ",lesao char(1)" +
+                ",fadiga int" +
+                ",fitness int" +
+                ",constraint fk_avaliacao_medica_atleta foreign key(codigo_atleta) references atleta(codigo_atleta)" +
+                ",constraint fk_avaliacao_medica_usuario foreign key(usuario_responsavel) references usuario(codigo_usuario)" +
+                ");");
         }
 
         private void ExecutarComando(string comandoSql)

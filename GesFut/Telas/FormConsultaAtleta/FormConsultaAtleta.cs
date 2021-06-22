@@ -43,7 +43,7 @@ namespace GesFut
         {
             try
             {
-                var codigoAlteta = dbgAtleta.Rows[e.RowIndex].Cells[0].Value.ToString();
+                var codigoAlteta = dbgAtleta.Rows[e.RowIndex].Cells[0].Value;
                 if (codigoAlteta is null)
                 {
                     CodigoAtleta = 0;
