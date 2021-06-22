@@ -15,7 +15,7 @@ namespace GestFutApi.Controllers
         {
             try
             {
-                var insert = AtletaServico.GetInsert(atleta);
+                var insert = "";// AtletaServico.GetInsert(atleta);
                 var conexaoDB = new ConexaoDB();
 
                 return conexaoDB.InsertDados(insert);
@@ -31,7 +31,7 @@ namespace GestFutApi.Controllers
         {
             try
             {
-                var update = AtletaServico.GetUpdate(atleta);
+                var update = "";// AtletaServico.GetUpdate(atleta);
                 var conexaoDB = new ConexaoDB();
 
                 return conexaoDB.AtualizarDados(update);
@@ -47,7 +47,7 @@ namespace GestFutApi.Controllers
         {
             try
             {
-                var delete = AtletaServico.GetDelete(atleta);
+                var delete = "";//AtletaServico.GetDelete(atleta);
                 var conexaoDB = new ConexaoDB();
 
                 return conexaoDB.DeletarDados(delete);

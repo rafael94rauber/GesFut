@@ -31,5 +31,11 @@ namespace GesFut
             ConsultaJogos formConsultaJogos = new ConsultaJogos();
             formConsultaJogos.Show();
         }
+
+        private void BtnCriarBanco_Click(object sender, EventArgs e)
+        {
+            ConexaoDB conexao = new ConexaoDB();
+            conexao.CriarBancoDadosZerado();
+        }
     }
 }

@@ -33,6 +33,7 @@ namespace GesFut
             this.btnAtleta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnConsultaJogos = new System.Windows.Forms.Button();
+            this.BtnCriarBanco = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,11 +76,22 @@ namespace GesFut
             this.btnConsultaJogos.UseVisualStyleBackColor = true;
             this.btnConsultaJogos.Click += new System.EventHandler(this.btnConsultaJogos_Click);
             // 
+            // BtnCriarBanco
+            // 
+            this.BtnCriarBanco.Location = new System.Drawing.Point(381, 72);
+            this.BtnCriarBanco.Name = "BtnCriarBanco";
+            this.BtnCriarBanco.Size = new System.Drawing.Size(129, 92);
+            this.BtnCriarBanco.TabIndex = 6;
+            this.BtnCriarBanco.Text = "Criar Banco de Dados";
+            this.BtnCriarBanco.UseVisualStyleBackColor = true;
+            this.BtnCriarBanco.Click += new System.EventHandler(this.BtnCriarBanco_Click);
+            // 
             // FormBemVindo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnCriarBanco);
             this.Controls.Add(this.btnConsultaJogos);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAtleta);
@@ -102,5 +114,6 @@ namespace GesFut
         private System.Windows.Forms.Button btnAtleta;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnConsultaJogos;
+        private System.Windows.Forms.Button BtnCriarBanco;
     }
 }

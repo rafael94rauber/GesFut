@@ -15,15 +15,52 @@ namespace GesFut
         //private static string Password = "123456";
         private static string ConexaoDb = "";
 
+
         public ConexaoDB()
         {
-            ConexaoDb = String.Format(
-                    "Server={0};Username={1};Database={2};Port={3};Password={4};SSLMode=Prefer",
-                    Host,
-                    User,
-                    DBname,
-                    Port,
-                    Password);
+            ConexaoDb = $"Server={Host};Username={User};Database={DBname};Port={Port};Password={Password};SSLMode=Prefer";
+        }
+
+        public void CriarBancoDadosZerado(string BancoDados = "postgres")
+        {
+            ConexaoDb = $"Server={Host};Username={User};Database={BancoDados};Port={Port};Password={Password};SSLMode=Prefer";
+            
+            ExecutarComando($"DROP DATABASE IF EXISTS {DBname};");
+            
+            ExecutarComando($"CREATE DATABASE {DBname};");
+
+            ConexaoDb = $"Server={Host};Username={User};Database={DBname};Port={Port};Password={Password};SSLMode=Prefer";
+
+            ExecutarComando("create table usuario(" +
+                " codigo_usuario bigserial primary key" +
+                ", nome varchar(100)" +
+                ", cpf varchar(11)" +
+                ", data_nascimento date" +
+                ", email varchar(100)" +
+                ", endereco varchar(200)" +
+                ", telefone varchar(20)" +
+                ", RG varchar(20)" +
+                ", usuario varchar(30)" +
+                ", senha varchar(100)); ");
+
+            ExecutarComando("create table atleta(" +
+                "codigo_atleta bigserial primary key" +
+                ", nome varchar(100)" +
+                ", cpf varchar(11)" +
+                ", data_nascimento date" +
+                ", altura double precision); ");
+        }
+
+        private void ExecutarComando(string comandoSql)
+        {            
+            using var conn = new NpgsqlConnection(ConexaoDb);
+            conn.Open();
+            using (NpgsqlCommand command = new NpgsqlCommand(comandoSql, conn))
+            {
+                command.ExecuteNonQuery();
+            }
+            conn.Close();
+            conn.Dispose();
         }
 
         public DataSet RetornarDados(string SQL)
@@ -57,6 +94,7 @@ namespace GesFut
             conn.Dispose();
             return numeroLinhasAfetadas;
         }
+
         public int AtualizarDados(IBaseSQL dados)
         {
             using var conn = new NpgsqlConnection(ConexaoDb);
@@ -69,6 +107,7 @@ namespace GesFut
             conn.Dispose();
             return numeroLinhasAfetadas;
         }
+
         public int DeletarDados(IBaseSQL dados)
         {
             using var conn = new NpgsqlConnection(ConexaoDb);
