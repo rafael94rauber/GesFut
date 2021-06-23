@@ -157,5 +157,10 @@ namespace GesFut
         {
 
         }
+
+        private void edtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

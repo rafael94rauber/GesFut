@@ -120,6 +120,7 @@ namespace GesFut
             this.edtNome.Name = "edtNome";
             this.edtNome.Size = new System.Drawing.Size(100, 23);
             this.edtNome.TabIndex = 1;
+            this.edtNome.TextChanged += new System.EventHandler(this.edtNome_TextChanged);
             // 
             // label3
             // 

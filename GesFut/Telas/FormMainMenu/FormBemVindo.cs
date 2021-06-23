@@ -41,9 +41,18 @@ namespace GesFut
 
             if (resultado == DialogResult.Yes)
             {
-                ConexaoDB conexao = new ConexaoDB();
-                conexao.CriarBancoDadosZerado();
-                MessageBox.Show("Banco criado.");
+
+                try
+                {
+                    ConexaoDB conexao = new ConexaoDB();
+                    conexao.CriarBancoDadosZerado();
+                    MessageBox.Show("Banco criado.");
+                }
+                catch
+                {
+                    MessageBox.Show("ERRO! Por Favor, reveja os passos do ReadMe!");
+                }
+                
             }            
         }
     }
