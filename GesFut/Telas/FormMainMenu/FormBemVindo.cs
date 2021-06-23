@@ -34,8 +34,8 @@ namespace GesFut
 
         private void BtnCriarBanco_Click(object sender, EventArgs e)
         {
-            var resultado = MessageBox.Show("Você esta deletando e criando, uma novo banco de dados."
-                , "Você ter certeza"
+            var resultado = MessageBox.Show("Clicando em Sim, você deletará um bando de dados e criará um novo."
+                , "Você tem certeza?"
                 , MessageBoxButtons.YesNo
                 , MessageBoxIcon.Question);
 
